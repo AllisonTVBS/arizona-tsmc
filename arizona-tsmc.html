@@ -592,7 +592,8 @@ body{background:var(--surface-warm);color:var(--ink);font-family:var(--body);fon
 
 <!-- Topic 5 Water -->
 <div style="background:var(--surface);padding:3rem 0;position:relative;background-image:url('一堆仙人掌.jpg');background-size:cover;background-position:center">
-  <div style="position:absolute;inset:0;background:rgba(244,246,252,.7);pointer-events:none"></div>
+  <div style="position:absolute;inset:0;background:rgba(244,246,252,.7);pointer-events:none;z-index:0"></div>
+  <div style="position:relative;z-index:1">
   <div class="section-wrap" style="padding-top:2rem;padding-bottom:2rem">
     <div class="section-label">重點報導・三</div>
     <div class="section-title">一滴水用3.5次<br>台積電從台南到亞利桑那的水資源布局</div>
@@ -632,25 +633,44 @@ body{background:var(--surface-warm);color:var(--ink);font-family:var(--body);fon
         <p style="font-size:.9rem;color:rgba(255,255,255,.6);line-height:1.9;margin-bottom:1.5rem">高科技外派人員、返台休假、訓練家屬探親創造穩定需求。鳳凰城過去是美國沒有亞洲直飛服務的最大市場，台積電效應讓這座城市正式進入亞洲航線版圖。</p>
         <a class="btn btn-sand" href="#">閱讀完整報導</a>
       </div>
-      <!-- 數字格 2×2 -->
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.08)">
-        <div style="background:rgba(10,15,30,.6);padding:1.2rem;text-align:center">
-          <div style="font-family:var(--mono);font-size:clamp(1.6rem,5vw,2.2rem);font-weight:700;color:var(--sand)">8<span style="font-size:.85rem">成+</span></div>
-          <div style="font-family:var(--display);font-size:11px;color:rgba(255,255,255,.45);margin-top:.3rem">平均月載客率</div>
-        </div>
-        <div style="background:rgba(10,15,30,.6);padding:1.2rem;text-align:center">
-          <div style="font-family:var(--mono);font-size:clamp(1.6rem,5vw,2.2rem);font-weight:700;color:var(--chip)">471<span style="font-size:.85rem">%</span></div>
-          <div style="font-family:var(--display);font-size:11px;color:rgba(255,255,255,.45);margin-top:.3rem">台灣訪客成長</div>
-        </div>
-        <div style="background:rgba(10,15,30,.6);padding:1.2rem;text-align:center">
-          <div style="font-family:var(--mono);font-size:clamp(1.6rem,5vw,2.2rem);font-weight:700;color:var(--oasis)">140<span style="font-size:.85rem">人+</span></div>
-          <div style="font-family:var(--display);font-size:11px;color:rgba(255,255,255,.45);margin-top:.3rem">每日台灣旅客</div>
-        </div>
-        <div style="background:rgba(10,15,30,.6);padding:1.2rem;text-align:center">
-          <div style="font-family:var(--mono);font-size:clamp(1.6rem,5vw,2.2rem);font-weight:700;color:var(--sand)">13.5<span style="font-size:.85rem">hr</span></div>
-          <div style="font-family:var(--display);font-size:11px;color:rgba(255,255,255,.45);margin-top:.3rem">直飛飛行時數</div>
-        </div>
-      </div>
+      <div style="margin-top:1.5rem">
+  <div style="display:flex;align-items:stretch;position:relative;margin-bottom:1.5rem">
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;position:relative;padding-bottom:1rem">
+      <div style="width:10px;height:10px;border-radius:50%;background:var(--sand);margin-bottom:.8rem;position:relative;z-index:1"></div>
+      <div style="font-family:var(--mono);font-size:clamp(1.6rem,4vw,2rem);font-weight:700;color:var(--sand);line-height:1">8<span style="font-size:.75rem">成+</span></div>
+      <div style="font-family:var(--display);font-size:11px;color:rgba(255,255,255,.45);margin-top:.4rem;text-align:center">平均月載客率</div>
+      <div style="position:absolute;top:5px;left:50%;width:100%;height:1px;background:rgba(255,255,255,.12)"></div>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;position:relative;padding-bottom:1rem">
+      <div style="width:10px;height:10px;border-radius:50%;background:var(--chip);margin-bottom:.8rem;position:relative;z-index:1"></div>
+      <div style="font-family:var(--mono);font-size:clamp(1.6rem,4vw,2rem);font-weight:700;color:var(--chip);line-height:1">471<span style="font-size:.75rem">%</span></div>
+      <div style="font-family:var(--display);font-size:11px;color:rgba(255,255,255,.45);margin-top:.4rem;text-align:center">台灣訪客成長</div>
+      <div style="position:absolute;top:5px;left:50%;width:100%;height:1px;background:rgba(255,255,255,.12)"></div>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;position:relative;padding-bottom:1rem">
+      <div style="width:10px;height:10px;border-radius:50%;background:var(--oasis);margin-bottom:.8rem;position:relative;z-index:1"></div>
+      <div style="font-family:var(--mono);font-size:clamp(1.6rem,4vw,2rem);font-weight:700;color:var(--oasis);line-height:1">140<span style="font-size:.75rem">人+</span></div>
+      <div style="font-family:var(--display);font-size:11px;color:rgba(255,255,255,.45);margin-top:.4rem;text-align:center">每日台灣旅客</div>
+      <div style="position:absolute;top:5px;left:50%;width:100%;height:1px;background:rgba(255,255,255,.12)"></div>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;padding-bottom:1rem">
+      <div style="width:10px;height:10px;border-radius:50%;background:var(--sand);margin-bottom:.8rem"></div>
+      <div style="font-family:var(--mono);font-size:clamp(1.6rem,4vw,2rem);font-weight:700;color:var(--sand);line-height:1">13.5<span style="font-size:.75rem">hr</span></div>
+      <div style="font-family:var(--display);font-size:11px;color:rgba(255,255,255,.45);margin-top:.4rem;text-align:center">直飛飛行時數</div>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:center;padding:.8rem 1.2rem;background:rgba(255,255,255,.04);border:1px solid rgba(0,212,255,.15)">
+    <div>
+      <div style="font-family:var(--mono);font-size:.85rem;font-weight:700;color:var(--chip)">台北 TPE</div>
+      <div style="font-family:var(--mono);font-size:.7rem;color:rgba(255,255,255,.35);margin-top:.2rem">出發</div>
+    </div>
+    <div style="flex:1;height:1px;background:linear-gradient(90deg,var(--chip),var(--sand));margin:0 1rem"></div>
+    <div style="text-align:right">
+      <div style="font-family:var(--mono);font-size:.85rem;font-weight:700;color:var(--sand)">鳳凰城 PHX</div>
+      <div style="font-family:var(--mono);font-size:.7rem;color:rgba(255,255,255,.35);margin-top:.2rem">抵達</div>
+    </div>
+  </div>
+</div>
     </div>
   </div>
 </div>
@@ -698,18 +718,6 @@ body{background:var(--surface-warm);color:var(--ink);font-family:var(--body);fon
     </div>
   </div>
   <a class="read-more" href="#" style="margin-top:1.5rem;display:inline-flex">閱讀完整報導</a>
-</div>
-
-<!-- OASIS QUOTE (Topic 6) -->
-<div class="oasis-band">
-  <div class="oasis-band-inner">
-    <div class="oasis-icon">
-    </div>
-    <div>
-      <div class="oasis-quote">「龍舟隊因台北與鳳凰城姊妹市淵源而生，成為台灣家庭在異鄉凝聚社群的方式。」</div>
-      <div class="oasis-source">Topic 6・沙漠中的台灣人・台灣移民落地人生</div>
-    </div>
-  </div>
 </div>
 
 <!-- Topic 6 & 7 & 8 grid -->
@@ -791,12 +799,11 @@ body{background:var(--surface-warm);color:var(--ink);font-family:var(--body);fon
   <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(0,212,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,.03) 1px,transparent 1px);background-size:40px 40px"></div>
   <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(232,184,109,.08) 0%,transparent 60%)"></div>
   <div style="position:relative;z-index:1;max-width:700px;margin:0 auto;padding:0 2rem">
-    <div style="font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--chip);margin-bottom:1.5rem">// 矽沙漠崛起・結語</div>
     <div style="font-family:var(--display);font-size:clamp(1.8rem,4vw,3rem);font-weight:700;color:white;line-height:1.15;letter-spacing:-.02em;margin-bottom:1.5rem">台積電不只蓋了一座廠<br><span style="color:var(--sand)">而是改變了一座城市</span></div>
     <p style="font-family:var(--body);font-size:1rem;color:rgba(255,255,255,.6);line-height:2;margin-bottom:2.5rem">從半導體供應鏈到龍舟隊，從再生水技術到小籠包，台積電的亞利桑那效應遠超過晶圓廠的邊界。矽沙漠崛起，台灣正在美國西南部寫下一個新的故事。</p>
     <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
       <a class="btn btn-sand" href="#">回到頂部</a>
-      <a class="btn btn-chip" href="#">TVBS新聞網</a>
+      <a class="btn btn-chip" href="https://news.tvbs.com.tw/" target="_blank" rel="noopener">TVBS新聞網</a>
     </div>
   </div>
 </div>

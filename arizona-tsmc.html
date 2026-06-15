@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>矽沙漠崛起｜台積電亞利桑那效應 TVBS新聞網專題策展</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&family=DM+Serif+Display:ital@0;1&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --sand:#E8B86D;
+  --sand-dark:#C4913A;
+  --sand-pale:#F7EDD8;
+  --chip:#00D4FF;
+  --chip-dark:#0099BB;
+  --chip-dim:rgba(0,212,255,.12);
+  --silicon:#1A2744;
+  --silicon-mid:#2E3F6A;
+  --silicon-light:#4A5F8E;
+  --oasis:#2DB87D;
+  --oasis-dark:#1D8A5C;
+  --ink:#0A0F1E;
+  --ink-mid:#3A4260;
+  --ink-soft:#7A85A8;
+  --surface:#F4F6FC;
+  --surface-warm:#FAFBFF;
+  --rule:rgba(26,39,68,.12);
+  --rule-light:rgba(26,39,68,.06);
+  --display:'Space Grotesk','Noto Sans TC',sans-serif;
+  --body:'Noto Sans TC',sans-serif;
+  --mono:'Space Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{background:var(--surface-warm);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.9;-webkit-font-smoothing:antialiased}
+
+/* ── HEADER ── */
+.site-header{background:var(--ink);padding:0 3rem;display:flex;align-items:center;justify-content:space-between;height:52px;position:sticky;top:0;z-index:200}
+.header-logo{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:white;font-family:var(--display);font-size:14px;font-weight:600;letter-spacing:.06em}
+.header-logo img{height:18px;width:auto}
+.header-badge{background:var(--sand);color:var(--ink);font-family:var(--display);font-size:10px;font-weight:700;padding:3px 9px;letter-spacing:.12em;text-transform:uppercase}
+.site-header nav{display:flex;gap:1.8rem}
+.site-header nav a{color:rgba(255,255,255,.55);text-decoration:none;font-family:var(--display);font-size:12px;font-weight:500;letter-spacing:.04em;transition:color .2s}
+.site-header nav a:hover{color:var(--sand)}
+
+/* ── HERO ── */
+.hero{position:relative;min-height:100vh;background:var(--ink);overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end}
+.hero-bg-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,212,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,.04) 1px,transparent 1px);background-size:60px 60px;animation:gridpulse 8s ease-in-out infinite}
+@keyframes gridpulse{0%,100%{opacity:.6}50%{opacity:1}}
+.hero-glow{position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(232,184,109,.18) 0%,rgba(0,212,255,.08) 40%,transparent 70%);top:-100px;right:-150px;animation:glow 10s ease-in-out infinite alternate}
+@keyframes glow{from{transform:scale(.9) translate(0,0)}to{transform:scale(1.1) translate(-30px,40px)}}
+.hero-chip-line{position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--chip),transparent)}
+.hero-content{position:relative;z-index:2;max-width:1100px;padding:0 4rem 5rem;width:100%}
+.hero-eyebrow{font-family:var(--mono);font-size:11px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--chip);margin-bottom:1.8rem;display:flex;align-items:center;gap:.8rem}
+.hero-eyebrow::before{content:'';display:inline-block;width:32px;height:1px;background:var(--chip)}
+.hero h1{font-family:var(--display);font-size:clamp(3.2rem,7vw,6rem);font-weight:700;color:white;line-height:1.0;letter-spacing:-.02em;margin-bottom:.4rem}
+.hero h1 .accent{color:var(--sand);display:block}
+.hero h1 .sub{font-size:clamp(1.4rem,3vw,2.4rem);font-weight:300;color:rgba(255,255,255,.7);letter-spacing:.01em;display:block;margin-top:.5rem}
+.hero-lead{font-family:var(--body);font-size:1.05rem;color:rgba(255,255,255,.7);line-height:2;max-width:640px;margin:2rem 0 2.5rem;padding-left:1.2rem;border-left:2px solid var(--sand)}
+.hero-pills{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:2.5rem}
+.hero-pill{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.6)}
+.hero-pill.hot{border-color:var(--sand);color:var(--sand)}
+.hero-scroll-hint{font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.35);display:flex;align-items:center;gap:.6rem}
+.hero-scroll-hint::after{content:'';display:block;width:40px;height:1px;background:rgba(255,255,255,.2)}
+.hero-stats-strip{position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);background:rgba(0,212,255,.06);border-top:1px solid rgba(0,212,255,.2);border-bottom:1px solid rgba(0,212,255,.2)}
+.hero-stat{padding:1.4rem 2rem;text-align:center;border-right:1px solid rgba(0,212,255,.15)}
+.hero-stat:last-child{border-right:none}
+.hero-stat-num{font-family:var(--mono);font-size:1.8rem;font-weight:700;color:var(--sand);line-height:1;margin-bottom:.3rem}
+.hero-stat-label{font-family:var(--display);font-size:12px;color:rgba(255,255,255,.5);letter-spacing:.06em}
+
+/* ── TIMELINE STRIP ── */
+.timeline-strip{background:var(--silicon);overflow-x:auto;padding:2.5rem 3rem}
+.tl-label{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--chip);margin-bottom:2rem;display:flex;align-items:center;gap:.6rem}
+.tl-label::before{content:'//';opacity:.5}
+.timeline{display:flex;gap:0;position:relative;min-width:860px}
+.timeline::before{content:'';position:absolute;top:20px;left:0;right:0;height:1px;background:rgba(255,255,255,.12)}
+.tl-item{flex:1;padding-top:3.2rem;position:relative;padding-right:1rem}
+.tl-dot{position:absolute;top:15px;left:0;width:11px;height:11px;border-radius:50%;background:var(--silicon);border:1.5px solid rgba(255,255,255,.25);transform:translateX(-5px)}
+.tl-item.hi .tl-dot{background:var(--sand);border-color:var(--sand);width:15px;height:15px;top:13px;box-shadow:0 0 0 4px rgba(232,184,109,.2)}
+.tl-year{font-family:var(--mono);font-size:1rem;color:rgba(255,255,255,.7);margin-bottom:.2rem;font-weight:700}
+.tl-item.hi .tl-year{color:var(--sand)}
+.tl-desc{font-family:var(--body);font-size:13px;color:rgba(255,255,255,.42);line-height:1.55}
+.tl-item.hi .tl-desc{color:rgba(255,255,255,.85)}
+
+/* ── SECTION COMMON ── */
+.section-wrap{max-width:1100px;margin:0 auto;padding:5rem 4rem}
+.section-label{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--chip);margin-bottom:.8rem;display:flex;align-items:center;gap:.5rem}
+.section-label::before{content:'//';color:rgba(0,212,255,.4)}
+.section-title{font-family:var(--display);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:700;color:var(--ink);line-height:1.15;letter-spacing:-.02em;margin-bottom:.8rem}
+.section-sub{font-size:.9rem;color:var(--ink-soft);font-family:var(--display);line-height:1.65;margin-bottom:2rem;max-width:580px}
+.divider{border:none;border-top:1px solid var(--rule)}
+
+/* ── CATEGORY NAV ── */
+.cat-nav{background:var(--surface);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);overflow-x:auto}
+.cat-nav-inner{max-width:1100px;margin:0 auto;padding:0 4rem;display:flex;gap:0}
+.cat-btn{font-family:var(--display);font-size:13px;font-weight:600;padding:1.1rem 1.5rem;color:var(--ink-soft);text-decoration:none;letter-spacing:.04em;border-bottom:2px solid transparent;white-space:nowrap;transition:color .2s,border-color .2s}
+.cat-btn:hover,.cat-btn.active{color:var(--ink);border-bottom-color:var(--sand)}
+
+/* ── ARTICLE LEAD CARD ── */
+.lead-card{display:grid;grid-template-columns:1fr 1fr;background:white;border:1px solid var(--rule);overflow:hidden}
+.lead-img-wrap{position:relative;overflow:hidden;min-height:360px}
+.lead-img-wrap img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s}
+.lead-img-wrap:hover img{transform:scale(1.04)}
+.lead-img-cap{position:absolute;bottom:0;left:0;right:0;padding:.65rem 1rem;background:rgba(10,15,30,.7);font-family:var(--display);font-size:12px;color:rgba(255,255,255,.65);font-style:italic}
+.lead-body{padding:2.5rem 3rem;display:flex;flex-direction:column;justify-content:space-between}
+.lead-kicker{font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--sand-dark);margin-bottom:.8rem;display:flex;align-items:center;gap:.5rem}
+.lead-kicker::before{content:'';display:block;width:16px;height:2px;background:var(--sand)}
+.lead-body h2{font-family:var(--display);font-size:1.55rem;font-weight:700;line-height:1.25;color:var(--ink);margin-bottom:1.2rem;letter-spacing:-.02em}
+.lead-body .teaser{font-size:.92rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1.5rem}
+.lead-body .teaser strong{color:var(--ink);font-weight:600}
+.read-more{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--display);font-size:12px;font-weight:700;color:var(--sand-dark);text-decoration:none;letter-spacing:.06em;border-bottom:1.5px solid var(--sand);padding-bottom:2px;transition:gap .2s}
+.read-more:hover{gap:.85rem}
+.read-more::after{content:'→'}
+.card-meta{font-family:var(--display);font-size:11px;color:var(--ink-soft);margin-top:1rem;padding-top:1rem;border-top:1px solid var(--rule-light)}
+
+/* ── 3-COL GRID ── */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.art-card{background:white;border:1px solid var(--rule);overflow:hidden;transition:transform .25s,box-shadow .25s}
+.art-card:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(10,15,30,.08)}
+.art-card-img{width:100%;height:200px;object-fit:cover;display:block}
+.art-card-body{padding:1.4rem 1.6rem 1.8rem}
+.art-kicker{font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--sand-dark);margin-bottom:.5rem}
+.art-card h3{font-family:var(--display);font-size:1.1rem;font-weight:700;line-height:1.3;color:var(--ink);margin-bottom:.7rem;letter-spacing:-.01em}
+.art-card p{font-size:.875rem;color:var(--ink-mid);line-height:1.8;margin-bottom:1rem}
+.art-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.8rem}
+.tag{font-family:var(--display);font-size:10px;font-weight:600;letter-spacing:.06em;color:var(--silicon-light);background:var(--surface);padding:3px 8px;border:1px solid var(--rule)}
+
+/* ── DARK DATA BAND ── */
+.data-band{background:var(--silicon);padding:4.5rem 0;color:white}
+.data-band-inner{max-width:1100px;margin:0 auto;padding:0 4rem}
+.data-band .section-title{color:white}
+.data-band .section-sub{color:rgba(255,255,255,.55)}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid rgba(255,255,255,.1);margin:2.5rem 0}
+.stat-block{padding:2rem 1.8rem;border-right:1px solid rgba(255,255,255,.08)}
+.stat-block:last-child{border-right:none}
+.stat-num{font-family:var(--mono);font-size:2.8rem;color:var(--sand);line-height:1;margin-bottom:.4rem;font-weight:700}
+.stat-unit{font-size:.9rem;color:var(--chip);font-weight:400}
+.stat-desc{font-family:var(--display);font-size:13px;color:rgba(255,255,255,.5);line-height:1.55;margin-top:.4rem}
+
+/* ── OASIS BAND (green highlight) ── */
+.oasis-band{background:var(--oasis);padding:3rem 0}
+.oasis-band-inner{max-width:1100px;margin:0 auto;padding:0 4rem;display:flex;align-items:center;gap:3rem}
+.oasis-icon{font-size:3rem;flex-shrink:0;background:rgba(255,255,255,.2);width:72px;height:72px;display:flex;align-items:center;justify-content:center}
+.oasis-quote{font-family:var(--display);font-size:1.45rem;font-weight:700;color:white;line-height:1.35;letter-spacing:-.02em;flex:1}
+.oasis-source{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-top:.5rem}
+
+/* ── CHAPTER LABEL ── */
+.chapter-bar{background:var(--sand-pale);padding:1.2rem 4rem;border-top:3px solid var(--sand);border-bottom:1px solid rgba(232,184,109,.3)}
+.chapter-bar-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:1.2rem}
+.chapter-num{font-family:var(--mono);font-size:.85rem;font-weight:700;color:var(--sand-dark);letter-spacing:.1em}
+.chapter-name{font-family:var(--display);font-size:1rem;font-weight:600;color:var(--ink);letter-spacing:-.01em}
+.chapter-pipe{width:1px;height:20px;background:var(--sand-dark);opacity:.4}
+
+/* ── CHIP DETAIL STRIP ── */
+.chip-strip{background:var(--ink);padding:1.2rem 4rem;display:flex;align-items:center;gap:3rem;overflow-x:auto;border-bottom:1px solid rgba(0,212,255,.15)}
+.chip-item{display:flex;align-items:center;gap:.7rem;flex-shrink:0}
+.chip-dot{width:6px;height:6px;border-radius:50%;background:var(--chip)}
+.chip-text{font-family:var(--mono);font-size:11px;color:rgba(255,255,255,.5);letter-spacing:.08em;white-space:nowrap}
+.chip-text strong{color:var(--sand);font-weight:700}
+
+/* ── WIDE FEATURE (half+half alt) ── */
+.wide-feat{display:grid;grid-template-columns:5fr 4fr;gap:0;background:white;border:1px solid var(--rule)}
+.wide-feat.rev{grid-template-columns:4fr 5fr}
+.wide-feat-body{padding:3rem 3.5rem;display:flex;flex-direction:column;justify-content:center}
+.wide-feat-img{min-height:340px;overflow:hidden;position:relative}
+.wide-feat-img img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* ── WATER MODULE ── */
+.water-module{background:var(--silicon-mid);padding:4rem;color:white;max-width:1100px;margin:0 auto;border:1px solid rgba(0,212,255,.15)}
+.water-flow{display:flex;align-items:center;gap:0;margin:2rem 0}
+.water-step{flex:1;text-align:center;padding:1.5rem 1rem;background:rgba(255,255,255,.05);position:relative}
+.water-step-num{font-family:var(--mono);font-size:.75rem;font-weight:700;color:var(--chip);letter-spacing:.1em;margin-bottom:.4rem}
+.water-step-name{font-family:var(--display);font-size:.85rem;font-weight:600;color:white;line-height:1.3}
+.water-arrow{font-size:1.2rem;color:var(--chip);opacity:.6;flex-shrink:0;padding:0 .3rem}
+.water-big{font-family:var(--mono);font-size:5rem;font-weight:700;color:var(--chip);line-height:1;text-align:center;margin:1.5rem 0}
+.water-big span{font-size:2rem;vertical-align:super;color:var(--sand)}
+
+/* ── PEOPLE GRID ── */
+.people-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.person-card{background:white;border:1px solid var(--rule);padding:1.8rem}
+.person-role{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--chip-dark);margin-bottom:.4rem}
+.person-name{font-family:var(--display);font-size:1.05rem;font-weight:700;color:var(--ink);margin-bottom:.4rem}
+.person-org{font-family:var(--display);font-size:.85rem;color:var(--sand-dark);font-weight:600;margin-bottom:.8rem}
+.person-quote{font-size:.88rem;color:var(--ink-mid);line-height:1.8;border-left:2px solid var(--sand-pale);padding-left:.9rem}
+
+/* ── MAP MODULE placeholder ── */
+.map-ph{background:var(--silicon);aspect-ratio:16/7;position:relative;overflow:hidden;border:1px solid rgba(0,212,255,.15)}
+.map-ph-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,212,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,.06) 1px,transparent 1px);background-size:40px 40px}
+.map-dot{position:absolute;transform:translate(-50%,-50%)}
+.map-dot-ring{width:20px;height:20px;border-radius:50%;border:2px solid var(--chip);animation:ring 2.5s ease-out infinite}
+.map-dot-ring.gold{border-color:var(--sand);animation-delay:.5s}
+@keyframes ring{0%{transform:scale(.5);opacity:1}100%{transform:scale(2.2);opacity:0}}
+.map-dot-core{position:absolute;top:50%;left:50%;width:8px;height:8px;border-radius:50%;background:var(--chip);transform:translate(-50%,-50%)}
+.map-dot-core.gold{background:var(--sand)}
+.map-label{position:absolute;font-family:var(--mono);font-size:11px;font-weight:700;color:white;letter-spacing:.08em;white-space:nowrap;background:rgba(10,15,30,.7);padding:3px 8px}
+.map-line{position:absolute;background:none}
+.map-overlay-text{position:absolute;bottom:1.5rem;left:2rem;font-family:var(--mono);font-size:10px;color:rgba(255,255,255,.35);letter-spacing:.12em;text-transform:uppercase}
+
+/* ── FOOTER ── */
+.site-footer{background:var(--ink);color:rgba(255,255,255,.4);padding:3.5rem 4rem;text-align:center}
+.footer-logo{display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-size:16px;font-weight:600;color:white;letter-spacing:.06em;margin-bottom:.8rem}
+.footer-logo img{height:20px;width:auto}
+.footer-topic{font-family:var(--mono);font-size:11px;color:rgba(255,255,255,.35);letter-spacing:.14em;text-transform:uppercase;margin-bottom:1.5rem}
+.footer-divider{border:none;border-top:1px solid rgba(255,255,255,.06);margin:1.5rem auto;max-width:160px}
+.footer-meta{font-family:var(--display);font-size:12px;line-height:2.2;color:rgba(255,255,255,.35)}
+.footer-chip-line{width:120px;height:2px;background:linear-gradient(90deg,transparent,var(--chip),transparent);margin:1.5rem auto 0}
+
+/* ── BUTTONS ── */
+.btn{display:inline-block;font-family:var(--display);font-size:12px;font-weight:700;letter-spacing:.08em;text-decoration:none;padding:10px 22px;cursor:pointer;transition:all .2s}
+.btn-sand{background:var(--sand);color:var(--ink);border:2px solid var(--sand)}
+.btn-sand:hover{background:var(--sand-dark);border-color:var(--sand-dark)}
+.btn-outline{background:transparent;color:var(--sand);border:1.5px solid var(--sand)}
+.btn-outline:hover{background:var(--sand);color:var(--ink)}
+.btn-chip{background:transparent;color:var(--chip);border:1.5px solid var(--chip)}
+.btn-chip:hover{background:var(--chip-dim);color:var(--chip)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:768px){
+  .site-header{padding:0 1.2rem}
+  .site-header nav{display:none}
+  .hero-content{padding:0 1.5rem 3.5rem}
+  .hero h1{font-size:2.6rem}
+  .hero-stats-strip{grid-template-columns:1fr 1fr}
+  .hero-stat{padding:1rem}
+  .timeline-strip{padding:2rem 1.5rem}
+  .timeline{min-width:600px}
+  .section-wrap{padding:3.5rem 1.5rem}
+  .cat-nav-inner{padding:0 1.5rem}
+  .lead-card{grid-template-columns:1fr}
+  .lead-img-wrap{min-height:220px}
+  .lead-body{padding:1.5rem}
+  .grid-3,.people-grid{grid-template-columns:1fr}
+  .grid-2{grid-template-columns:1fr}
+  .stat-grid{grid-template-columns:1fr 1fr}
+  .data-band-inner{padding:0 1.5rem}
+  .oasis-band-inner{flex-direction:column;gap:1.5rem;padding:0 1.5rem}
+  .chapter-bar{padding:1rem 1.5rem}
+  .chip-strip{padding:1rem 1.5rem}
+  .wide-feat,.wide-feat.rev{grid-template-columns:1fr}
+  .water-module{padding:2rem 1.5rem}
+  .water-flow{flex-wrap:wrap}
+  .water-big{font-size:3.5rem}
+  .site-footer{padding:2.5rem 1.5rem}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <a class="header-logo" href="#">
+    <img src="TVBS logo-white.png" alt="TVBS">TVBS新聞網
+  </a>
+  <nav>
+    <a href="#industry">產業篇</a>
+    <a href="#city">城市篇</a>
+    <a href="#life">生活篇</a>
+    <a href="#aviation">航空篇</a>
+  </nav>
+
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-chip-line"></div>
+
+  <div class="hero-content">
+    <h1>
+      <span class="accent">矽沙漠崛起</span>
+      <span class="sub">台積電把亞利桑那變綠洲</span>
+    </h1>
+    <p class="hero-lead">台積電落腳沙漠，不只帶來一座晶圓廠，而是帶動半導體供應鏈、造鎮開發、人才培育、台灣美食、航太科技與直航航班。TVBS新聞網深度策展，帶你看懂一家台灣企業如何改變一座美國城市的命運。</p>
+    <div class="hero-pills">
+      <span class="hero-pill hot">半導體供應鏈</span>
+      <span class="hero-pill hot">北鳳凰城造鎮</span>
+      <span class="hero-pill">水資源布局</span>
+      <span class="hero-pill">人才培育生態系</span>
+      <span class="hero-pill">台灣品牌赴美</span>
+      <span class="hero-pill hot">華航直飛鳳凰城</span>
+      <span class="hero-pill">航太漢翔</span>
+    </div>
+    <div class="hero-scroll-hint">向下探索</div>
+  </div>
+
+  <div class="hero-stats-strip">
+    <div class="hero-stat">
+      <div class="hero-stat-num">$1,000<span style="font-size:.9rem;color:var(--chip)">億</span></div>
+      <div class="hero-stat-label">2025年台積電再增投資</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">3<span style="font-size:.9rem;color:var(--chip)">座</span></div>
+      <div class="hero-stat-label">亞利桑那晶圓廠規劃</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">8<span style="font-size:.9rem;color:var(--chip)">成↑</span></div>
+      <div class="hero-stat-label">華航鳳凰城航線載客率</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">471<span style="font-size:.9rem;color:var(--chip)">%</span></div>
+      <div class="hero-stat-label">2025年台灣訪客年增率</div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<div class="timeline-strip">
+  <div class="tl-label">台積電亞利桑那效應・大事紀</div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2020</div>
+      <div class="tl-desc">台積電宣布投資亞利桑那，第一波供應鏈啟動評估</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2021</div>
+      <div class="tl-desc">AZ第一座晶圓廠正式動工，鳳凰城升溫</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2022</div>
+      <div class="tl-desc">擴建第二座晶圓廠，第二波供應鏈跟進佈局</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2023</div>
+      <div class="tl-desc">亞利桑那州啟用駐台貿易投資辦事處，台美橋接啟動</div>
+    </div>
+    <div class="tl-item hi">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2025</div>
+      <div class="tl-desc">追加1000億投資，宣布第三座晶圓廠；華航台北直飛鳳凰城開航</div>
+    </div>
+    <div class="tl-item hi">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2026</div>
+      <div class="tl-desc">ACA帶領台企赴美考察，矽沙漠台商生態圈成形</div>
+    </div>
+  </div>
+</div>
+
+<!-- CHIP STRIP -->
+<div class="chip-strip">
+  <div class="chip-item"><div class="chip-dot"></div><span class="chip-text">廠區位置 <strong>North Phoenix, AZ</strong></span></div>
+  <div class="chip-item"><div class="chip-dot"></div><span class="chip-text">製程節點 <strong>4nm / 3nm</strong></span></div>
+  <div class="chip-item"><div class="chip-dot"></div><span class="chip-text">合作大學 <strong>ASU・Arizona State University</strong></span></div>
+  <div class="chip-item"><div class="chip-dot"></div><span class="chip-text">氣候優勢 <strong>一年近360天適合飛行</strong></span></div>
+  <div class="chip-item"><div class="chip-dot"></div><span class="chip-text">台客成長 <strong>每日25人 → 140人+</strong></span></div>
+</div>
+
+<!-- INTERACTIVE MAP -->
+<div style="position:relative;background:var(--silicon);border-top:1px solid rgba(0,212,255,.1);border-bottom:1px solid rgba(0,212,255,.1);overflow:hidden">
+  <svg viewBox="0 0 1200 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
+    <defs>
+      <pattern id="mapgrid" width="40" height="40" patternUnits="userSpaceOnUse">
+        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,212,255,.055)" stroke-width="0.5"/>
+      </pattern>
+      <marker id="arrowchip" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+        <circle cx="3" cy="3" r="1.5" fill="rgba(0,212,255,.6)"/>
+      </marker>
+      <filter id="glow-gold">
+        <feGaussianBlur stdDeviation="3" result="blur"/>
+        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+      <filter id="glow-chip">
+        <feGaussianBlur stdDeviation="2.5" result="blur"/>
+        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </defs>
+
+    <!-- background grid -->
+    <rect width="1200" height="420" fill="url(#mapgrid)"/>
+
+    <!-- ── US OUTLINE (image) ── -->
+    <image href="data:image/png;base64,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"
+      x="40" y="50" width="460" height="280"
+      style="opacity:0.55;mix-blend-mode:screen"/>
+
+    <!-- Arizona highlight -->
+    <path d="M 138,167 L 172,167 L 172,225 L 138,225 Z"
+      fill="rgba(232,184,109,.10)" stroke="rgba(232,184,109,.45)" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="140" y="200" font-family="'Space Mono',monospace" font-size="7.5" fill="rgba(232,184,109,.5)" letter-spacing="0.3">ARIZONA</text>
+
+    <!-- TSMC / Phoenix dot — inside Arizona box -->
+    <circle cx="155" cy="210" r="14" fill="none" stroke="rgba(232,184,109,.18)" stroke-width="1">
+      <animate attributeName="r" values="10;20;10" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0;1" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="155" cy="210" r="5" fill="#E8B86D" filter="url(#glow-gold)"/>
+
+    <!-- TSMC label -->
+    <rect x="166" y="194" width="116" height="34" rx="2" fill="rgba(10,15,30,.78)"/>
+    <text x="172" y="207" font-family="'Space Mono',monospace" font-size="9" font-weight="700" fill="#E8B86D" letter-spacing="0.3">TSMC Arizona</text>
+    <text x="172" y="221" font-family="'Noto Sans TC',sans-serif" font-size="9" fill="rgba(255,255,255,.5)">北鳳凰城廠區</text>
+
+    <!-- ── TAIWAN OUTLINE (image) ── -->
+    <image href="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAKMAX4DASIAAhEBAxEB/8QAHAABAAICAwEAAAAAAAAAAAAAAAcIBQYBAwQC/8QAPxABAAIBAwIDBgQDBgUDBQAAAAECAwQFEQYhBxIxCBNBUWGBIjJxkRQVoSNCUmKxwRYkM5LRU+HwJ0NjcvH/xAAbAQEAAwADAQAAAAAAAAAAAAAABAUGAQIHA//EADIRAQACAQMCAwUHBQEBAAAAAAABAgMEBREhMRJBURNhobHwBhQiIzJxkUKBwdHhJPH/2gAMAwEAAhEDEQA/AKZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkbwv8AC/eupdbt+5a3RTi2HJk82TLbJETkpHPMVjnnvMccu+PHbLaK0jmXzy5aYqze88Q0naNk3jd7cbXtes1kReKWthw2tWsz6czEcR926bX4Oda6vJqqZ9FTSe5xTek5LxMZZ/w14/3Wg2TaNs2TQU0O1aHDpNPT0pjpxHPxmfnMvc0OLYo45yW/hms32htz+VTp71Gd32vcdo1dtJueiz6TPH9zLSa8/WPnH1h41zPEbpbbuqemdVotZgxzlpjtfBm8v48V+O0x/wCFNs2O+HNfFkrNb0tNbRMd4mFRrtFbSX8MzzE9pXW36+usx+KI4mO8PgBCTwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGc6G6c1PVfU2l2XS3jFOaecmWa8xjpHrPHx/wDMrlbJt2n2nZ9HtekiYwaTDTDT9KxEf7d/qhv2b+mt62/Z9bv04cOL+LnyYMWfF5b3rWPzRb1iszMx9ufkmLZdxpuehjPGO+HLW0482G8cWx3ie9Z+/fmPWOJ+TTbLirjr4rR+K3b9vcye+57ZLeGvWte/Hr73uAX7OiD/ABl8J9333qb+ddPV0s0z0iufDaYx+W1Y/NE/HmE4CLq9JTVU8N/36d0vR63JpL+Kn7deyj/U+022PfdVtN9Ti1N9NaK3yYvyzbyxMxH6TMx9mNWa698Fdm3zV212zZo2vU5LWvmiIm9L2nvzxM9vtxCPc/gT1Vi0Gr1EarR5M2GecWGkzM5Y4+c8RE/Rks23ajFbjw/x1bPBuemy1ifHxPv6InHt3bad02jNXDuu26vQ5LRzWuow2xzaPnHMd4eJBWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN26B8NOo+r8UarS46aXQzbj+Iz8xE/Oax8Up7D4AbTgyUy7zvGp1flmJtiw093WfpM95/bhLwaHPn60r09ULUbhp9PPF7dfTzQd0z0zvnUmptg2Xbs2rtX81qxxWv6zPaEl6HwB37NtXv9Ru+j02tmvMaa1JtWJ+U3ie368SsDs+07bs+jrpNr0WHSYKxHFMdOP8AR7l5g2PHEfmzMz7uzP6j7QZZt+TERHv7q94PZ63G2nx2zdS6XHmmP7SldLa1az8eJ80TP7Q3vw98Ith6YyRq9baN213HbJmxxFKf/rXme/1lJImY9q02O0W8Pb1Qcu8avLWazbv6EREREREREdoiPg8Gi26NLuuu1tL9tXNbWpx281YivP3iI/Z7xPtjraYmfL/XH+VdXJasTEefSf55AHd1AAAAaf4ieH2zdaxpp19smny4Lf8AWw8Rfy8fl5nns0LW+z5tlsd/4PftXivP5Zy463rH6xHEym0Qcu3abLabWr1n94WGHdNVhrFa26R+0q4eInhTtnRvQGfcravNr9wjLjrGXtjpXmeJ4r8Yn7yhxan2hun9dvnQ18uizxSNvtOqy45meMlK1nnv9+fsqsy+5YK4M80rHENbteotqMHjvbmeZ59wAgLEAAAAAAAAAAAAAAAAAAAAAAAAAAWF8FPCnbv5Ni33qfRU1Wo1MefBpssc0x047TaPjafl8PkiHwu2fLvnXW2aPHpJ1OOuauXPX4RjrMTMz9PT9+FyqVitIrWIisRxEcdohdbPo65rTe8cxHzUO+a6+CkY8c8TPyfGDDi0+GmHBipix0jy1pSOIrHyiPTh2A1URx0hj5mbTzIA5AAAAAAAAAAAAHh6g2+N22HX7XbJOONXpr4PPEc+XzVmvP2Vzw+BHVdsGstk1OipkxW409PPzGePnz/d+/P+6xXUO9bbsG2ZNy3XU00+mx8RNp/0iPr8kQdV+Puhx6fJh6a23Lm1EX4rn1VYjHx/iisTzP6TwpdzppLWi2aeJiO0L3aba2tZrgrzEz3lCHU3T+79N7l/Lt70VtJqfJGSKTatuazMxExNZmPWJ/Zi2W6q6h3Xqfd7bpu+o99qJrFI4rxFaxMzFYj4R3n92JZa3h5nw9mvp4vDHi7gDq7AAAAAAAAAAAAAAAAAAAAAADv0Gk1Ov1uHRaPDbNqM94x48dY72tM8RDoS17NfS9t06ovv+abVwbZ/0+3a+S0THHP0if6w+uHFObJFK+b46jNXDjtkt5Ji8J+hNH0Zsla3x4cm65q/8zqIjvPfnyxz8I9Phy3YG6wYK4KRjpHZ57qM98+Scl55mQB9nxAAAAAAAAAAAAHTrdRTS6PNqckxFcVJvbmeI4iJl2zMViZmeIiOZlWjxs8UNTv2p1HT+z2tg2zFecebJE/i1ExP9K8x90HX62ulpzPee0J+36C+rycR0iO7XfFPxE3PrbWUx2r/AAm3YZ5x6atvNE2jn8czxzM8fD4NHBir3te02tPMt5jx1x1itY4iAB1dwAAAAAAAAAAAAAAAAAAAAAAAGb6H2DUdTdT6PZ9PWf7a8TktH92kd7T+39VwOk+ndq6X2iu17Rp/c6etrWmJt5pmZ9ZmZ7z/AF7dlXPAzX63ReJW2V0VqxOptOHLEx60mOZ/SeYhbpo9ixUmLXmOrL/aHNkia4+fwz8wBomZAAAAAAAAAAAAAAap4ubzk2Hw83bcMFppn9z7rFaPWLXnyxP6xzz9lOFnPaez3x+H2LFWZiuXWU5+vHMqxshvV5tqfD6RDabFjiul8XrMgCpXQAAAAAAAAAAAAAAAAAAAAAAAACQfAvpLVdQ9aaPW5NLN9t0GWM2e96/gtNe9afWZnj7ervjxzkvFK95fPLkripN7dob97Pfh5uW27jHU+86fDTHfTf8AKYrxzes2mPx/5Z45/dOZERERERERHpEDcaPSV0uPwV/vPvYHW6y+ryeO39o9wAlIYAAAAAAAAAAAAACNPaQ23LrvDfNqMUTadHmpmtER/d54mftyqwvTu2mwa3bNVpNTjrlwZsNqZKW9LVmO8feJUXtxFpiI4jllN8xeHPF484bHYM3j080n+mfm4AUq9AAAAAAAAAAAAAAAAAAAAAAHo23R6jcdw0+h0mOcmfUZK48dY+NpniHxpcGbVanFptPjtkzZbxTHSvra0zxER91h/Dfwb1HT+9bdv+t3PBm1GCvnnB7qZrS8xxHfn4d/h9UjT6bJqLcUjn1RtVq8Wmrzknj0dnTPgP0/h0Wny73qdZqtXNI99jpkiuLzfKOIi309Uo9ObJtvT20Ydr2rTxg0uHmK155meZmeZme895ZEbLT6LDp+tK9fXzYbU6/PqOmS3T08gBLQwAAAAAAAAAAAAAAAHzlr58dqc8c1mOVJ+tNsybP1Zue25KTT3OpvFYn/AAzPNZ/aYXaQ17QPROx6vH/xPqN1rtmp8vufx0m2PNaImYieO8Tx2Um9aacmOMkf0/5X2w6muLLOOf6vmrkAyrYAAAAAAAAAAAAAAAAAAAAAAJG9nvp7JvXX2DWTEfw+3R7/ACTMcxNu8Vj9+/2WsRl7PHSuTp/o6ddq6TXWbnaMtqzHE0xx2rX9e8zP68fBJrYbRp5xYPFMfq6/6YjetT7bUzWO1en+wBaqgAAAAAAAAAAAAAAAAAARn7SWbV4fDbL/AA0xFL6mlNRzWJ/BPPz/AM0wkq8zFLTEczxMxCrHi74gdV71qdV0/umkx7ZpKZI50sU5tPlnmszafX4T24hVbtqK4sM0nnm3b/q32bS2y54yV44r3/4jYBj23AAAAAAAAAAAAAAAAAAAAG/eDPQup6v6grnzVnHtmjtXJnyWr2yTE8xSPh3+P0/WGu9E9Mbn1ZvmLa9txzM2mJy5Zj8OKnPe0/8Aj4rjdO7Tptk2bS7ZpaUimDFWk2rSK+aYjvPEfPhZ7boZ1N+bfpj4+5U7ruMaSnhr+qfh73ux0rjx1pSIitY4iPlD6BsYjhh5nmeQByAAAAAAAAAAAAAAAAAANe6/6r0PR/T+TdtdS2WPNFMeKkx5r2n0jvP/APFU/EDq7UdYbrXcNVt+i0uSvmiLYMfF71me3nn+9MfNkfGTqrW9Sdaa+l89p0Oj1F8Omxc/hiKz5fN+s8c/dpLF7hrranJxH6Y+uW62zb66XHEz+qfrgAVy0AAAAAAAAAAAAAAAAAAAbb4UdOafqXrfQbZr5vTTX82S3FfzxWOfL+k/F2pWb2isd5dMl4x1m1u0Jl9mDp+dD0tqN9y/n3HJNcccelKTMf68pgdWk0+DSaXHpdNipiw4qxWlKRERWOOOO3o7W60en+74Yp9c+bz7W6n7zntk+uPIASUUAAAAAAAAAAAAAAAAAAeXd9dg23a9TuGqyRjw6fFa97T6REQ9TQPaAnPHhfuXuMvu5maebv6180eaP2R9VknFhteO8QkaTFGXPSkz0mVUtdm/iNbnz9595ktfv9Z5dIME9GAAAAAAAAAAAAAAAAAAAAZLprZdf1Dvem2jbMM5dTqL+WsfCI+Mz8ohcbpPYNFsmx7fosWmxVvpcMVi3Ec88RE9/wB0X+yzsmHFsWu33Jhr7/Nm91iyTHeKVjvET8O6amn2fRRFPbW82S3zXTbJ7CvaPiAL5ngAAAAAAAAAAAAAAAAAAABWD2gOttdvXUeo6fxWjFtugyeXy19c1/8AFb9PhDf/ABq8VZ2G07J09l02fWZMdozZq3838NPy4/xes/RXDPly5818+fJfLlyWm173nmbTPrMyzG76+Mv5WOenm1my7dOL8/JHWe3q+AFC0QAAAAAAAAAAAAAAAAAA5rWbWitYmbTPERHrLs0mm1Gr1FdPpcGXPmv+XHjpNrT8e0R3Wr6E8M+ldBsG25NZsmDNuFaVy3y5omb+89f6T+yVpNHfVX8NPih6zW49JSLX+Dv8Dti3XYOg9Lpd1v5cmSbZa4JpETii088TPxlvbiIiIiI9Ictrp8EYMcY48mD1Oec+Wclo7+gA+z4gAAAAAAAAAAAAAAAAACI/aT6q1+x7Jods23Nk0+XcLWm+Wk8WilOOYifWOZtH2S4hD2rdRoP5TtGltNJ1/v7XpH96Mfl4n9I58v6q3drTXS24n0Wmz1i2rpzHPdX2ZmZmZmZme8zLgGMboAAAAAAAAAAAAAAAAAAABMXgDufRHTtMm7bzumLFu2a04sdL0n+xp8+fTv8AGefTssbhyUzYaZcVotS8easxPMTEq5+EvhDuG4Z9B1Bvk00+hi1c+PT2r5rZq9pjn5RPZY6sRWsVrHER2iPTs1ezVyxj4tWIr5essbvtsNs0TW0zbz9IcgLpRgAAAAAAAAAAAAAAAAAAANT8VurK9G9IZt0rSMmpveMOmrPpOS0TMc/SIrM/XhUrqHety3/dMm57tqr6nU5OIm1vSIj0iI+ELP8Aj/09qeoPD7LXSczn0OaNXWkf34rW1ZiPrxaZ+yp7Jb1fJ7fwzPTybLYaY40/irH4ueoAp14AAAAAAAAAAAAAAAAAAJA8G+hdd1L1DotbqtBltsuLLNsuaaf2d5rx+D695jn6ctJ2nQandNz0+3aOnn1GoyRjx159Zlc3obYsPTXSmg2bFPMafHEWnj81572n9ZmZWO26P7zl69o+uFXuuu+6Yvw/qn65ZqsRWsVrERERERx9Pg5Bs4jhhZnkAcgAAAAAAAAAAAAAAAAAAADr1GTFiw3yZrVrjrHNptPEccKZ+JOs2zX9cbrqtnw1w6K+eYx1rHETxHE2j9ZiZ+6Zvad37fNs0+3aDRZvcaHW48tc1q+uTtETWfpxKu7J7zqfaZfZRH6Wx2LSeyxTlmf1fX8gCmXoAAAAAAAAAAAAAAAADIdOaDT7pvel2/Va/Dt+HPfy21GWJmtO0+vHznt9wnoynhnsmr6g6227b9JbJSfexkyZKWms0pXvaeY7x8vuuZipGPHXHXvFa8Rz6+jTPDrw42PorUanV7dl1Gpz6msV97nmszSnPPFeIjtPr9eG6tftOitp8c2v3lid411dTkiKfpj5gC2U4AAAAAAAAAAAAAAAAAAAAACuvtVa3Lk6h2rQTaPdYdPbJEfHzWnvM/shdIXtB7nXcfErWVx3i1dLjpg7T25iOZ/1R6wesv4897e96HoaeDTUr7oAEZLAAAAAAAAAAAAAAAASZ4G+Hml6z1Wr1u63yV27STFPJSeJy3mJnjn4REcT94TD0x4O9I7JqsOrnHn1uoxTfvnt5qWi3MRzXjjtE8Or2cNFptL4a6fPp55yarPkyZp57eaJ8vx+lYhJTVbdt+G2Gt715merH7nuWeNRfHjtxEOjb9Jg0OixaPTVmuHFWK0ibTbtHp3nvP3d4LqKxWOI7KK1ptPM9wBy4AAAAAAAAAAAAAAAAAAAAGG6233B030vrt51EWmunxc1rHra3pWP3lmUc+0XP/0v1kRlrTnNi7TP5vxekIutyWx6e9o78JWhxxl1FKW7c9VWNXqM2r1WXVajJOTNmvN8l59bWmeZl1Awj0QAAAAAAAAAAAAAAAABkumNpz771DoNn03/AFNXnriiePyxM95/SI5n7OYjmeIcTPEcyt54YabSaXoHZsWi59z/AAlJ5njmZmO89u3PLZHh2Da9LsmzaXatFTyYNNiilY/T/V7m901JphrWY6xEPONTkjJmteJ5iZn5gD7viAAAAAAAAAAAAAAAAAAAAAAK7+091RqM+74elceG+LT6eK58l5/+7aY7cfSO/wB/0WIVK8fd0/mfihuXlvF8WkimmpxHHHlrE2j/AL5spd7yTXBFYnvPwXmwYotqJtMdo/iWhAMo2QAAAAAAAAAAAAAAAAl32Xdv0up6w1utzUi2bSaePc8x+WbTMTMfXiP6yiJNHspxX/iLd5mbeaNPj4iI7etkvQxE6ikT6oe4TMaXJMeixQDdPPAAcgAAAAAAAAAAAAAAAAAAAAAMd1LrLaDp7X6ykTNsWntaOJ+MQpHq9Rm1Wqy6nUZLZM2W83ve08za0zzMzK3vjHu+HZvDzdc+TJWuTLinDhjmPxXt2jt8f/HKnrK75fnNWvPaGv8As9j4wWtx3n5ACkX4AAAAAAAAAAAAAAAAnH2bdB1Hs+92yZ9kz12zddNXJXV24itYrzNZj5xPm/8AkcoOWk8E+vto3rY9r6bxY9RTcdFoaY8lZxzNZjHWtfN5uOOJ7fusNsrS2or4rcen7+iu3W166a3hrzz393vScA2rBAAAAAAAAAAAAAAAAAAAAAAAAK8+1Zud8m9bRs9b3jHhwWz3r6Vm1p4iftFZ/eUJpr9qzBoK77tGopntOuvgtXJj7cRjifwz84nmbR9kKMNuHP3m/Pq9A23j7rTiPIAQ04AAAAAAAAAAAAAAAATJ7Lu7aXT9SavaL6bHGo1eKcldRNvxTFePwRH3tPb5Shts/hVuebaPEDaNbp9HbW5ozTjphrbyza16zSO/E8cTbn7Pvpcnss1b+ko+rxe1wXpHnErljik2mlZtERbiJmI+Hzhy3sdXnPHAA5AAAAAAAAAAAAAAAAAAAAAGO6m3PDsvT2v3XUeb3WlwXy2ivrPEfD6/J0veKVm1u0O+Ok5LxWO89FUPGrcf5l4lbvljJOTHjyxipM89orERMd/ry0137hqsuu1+o1ue3my58tst5+tp5n/V0PP728dptPm9Ix0ilYrHkAOruAAAAAAAAAAAAAAAALG+zb0hoMPTlOp9XpMWXXZ8tv4bLevM4qx+H8Pyme/dXTHWLZK1tbyxMxEzx6LvdL7fg2npzbds09vNi02mx4q2n1txXjmf1+P6rfZtPGXNNrRzEfPyUu+am2LBFazxNp+HmyQDXMWAAAAAAAAAAAAAAAAAAAAAAI99oXcI0Hhhr6eSLTq7008c/Dm0Tz+0SkDNkpixXy5LRWlKza1p+ER/7KpeLviRresNVl23DSmLaMGom2COPx347RMz9fXhV7tqq4cM087fUrfZtJbNnjJ5Vnn/AEjwBjm3AAAAAAAAAAAAAAAAAAZro3prdOp95xbftulyZYm1ffZIj8OKvPebT8PiuftWjw7ftum0Onia4tPjjHSJtMzERHEd57/vKG/ZV2jV6fa923jNimmn1VqY8Ez/AH/Jz5pj6czH3iU2tVsulimL2s97fJj9+1U3y+xjtX5yALtQgAAAAAAAAAAAAAAAAAAAAANM8ad4ybJ4dbnqsPknJkpGGsX/AM8+Xnj6cqgJ49pXrPUUy36NxaOtMdq48+XPfifPE8zEVj4ekd/ogdjd2zxl1E+HtHRuNmwTh00eKOs9f9ACsWwAAAAAAAAAAAAAAAADafDXozW9a75Og02amDDhrGTPlt61rzx2j4y7VrN5ite7re9aVm1p6Qn32c9+pu3QVNDaMVc+3XnBNaes04ia3mPvx9ZiUmNT8P8AoLY+i8WWdsrmvqM9IpmzZLzM3iJ59PSPtDbG30FMmPBWuXvH1DAbhkxZdRa+LtPX/YAmIQAAAAAAAAAAAAAAAAAAAADq1Op0+lx+fU58eGvpE5LxWP6y4m0VjmXNazaeIV+9q7Jt877s+PHWP5hXT3nNaP8A05n8ET8+8XQmk/x86w2LqjeMeHbNBzn0d5xX18275KxzxWsRPHl5mZ5/b1RgwutvGTUXtXtMvQtBjtj01K27xAAipYAAAAAAAAAAAAAAAA3bwl6v1/S27ZcG3aTTZ8242xYYtmt5Ypxb5/WLTH7NJcxMxPMdpdqWmk+Kvd1vSt6zW0dF7sF/eYaXny8zEc+WeY5/37vtUzoPxW6m6YyYsGTU23Hbq8ROnzzzNY/y29Y/0WU6H6s2nq7Z6bjteXn4ZcVvz4rcekx/v/7Nhodyx6n8M9Le/wDww+v2rLpZ8fevu/yz4CzVYAAAAAAAAAAAAAAAAAAAArd7T3UF9Z1NpthpEe50OOMlpi08ze3wmPSOIiP3WE3zctNs+z6vdNZby4NLinLefpHfj/Tj6qWdUbrl3zqLX7vlm3m1We2SItPM1rM/hr9o4j7KHfNR4ccYo7z1lovs/pptktmmOkdI+v2Y0BmGsAAAAAAAAAAAAAAAAAAAAGd6I6n3HpTfsO6bfltEVtEZsXP4ctOe9Z/2n4MEOYmazzDi1YtHEry7HuWm3faNNuWjvF8OoxVyVn9Y9HtRt7OGWb+GOkrbLF/Jmyxxz3pHnt2/+fNJLd6TLObBW9u/DzvW4Yw57Ur2iQBJRgAAAAAAAAAAAAAAAAGteJnUen6X6P1u5Zr1jJNJx4KzP58kx2iP9fpxy+ebJXFjm9u0Ry+mDFbNkjHWOszwjf2ievtFj2rL0ntmaM+pzxE6q9Lc1x15/JP1nj0+vKvT6yXvkyWyZLTa9pmbWmeZmZ+L5YbU6i+oyTez0HSaWmlxRjoAI6SAAAAAAAAAAAAAAAAAAAAAAm/2Vd7vj3LdOn8lpnHmxxqcMc9otX8N/wB4mv8A2rBqd+D25ara/EXac2kx2y2yZfc3pX1tW0cT+3r9lxI9Gr2PN4sM09J+Esdv+GKZ4vH9UfGPqABdKIAAAAAAAAAAAAAAABi986h2LY60nd920eh888UjNlrWbfb4+vf5Ky+N3Xdur97rpNLxG26C9q4preZjNb08/wD4ce0NptwweJ+uya283x56Y8mmn4Rj8sRxEfDvE8/Xv8UeMfuO4Zc1pxdoifrlttr23FgrXLE8zMfP0AFUuAAAAAAAAAAAAAAAAAAAAAAAAH3hyZMOWuXDktjyVnmtqzxMT9JW48EupbdTdA6PPqMnn1ml/wCW1EzPebV9Lc/WJiZ+vKoiVfZt6l/lPWFtn1GXy6bcq+WsT6e9j8v7xz9+Fhtmp9hqI57T0lWbtpvvGmnjvHWFnQG1YQAAAAAAAAAAAAAAfOS0Y6Wvb8tYmZ+kQZclMWO2TJaK0rHMzM8Rwrx4weL2q1mrz7J0xnrj0VYnHm1VY5tlmfWKz8I9e6FrNbTS05t3ntCdodBk1d+K9o7y0rxb611HWW+0yZNHh02LRefFi8s82tHm9Zn7R2+HdpYMTe9r2m1u8t7SlcdYrWOkADq7gAAAAAAAAAAAAAAAAAAAAAAAD27HGv8A5zo52uMs66M1baf3VebeeJ5iYh4m1+E296Tp/r7bdy10T/D1vOO9ojmaRaOPN9uf25dqRE2iJnh0yTMVmYjlb7a8efFt2nx6rPbPnjHX3mS1Yr5rfHtHp3/Z6XETExExPMTHMS5egUiK1iIebXmbWmZ8wB3dQAAAAAAAAABqHiJ1/svR2gyXz5qajX+X+y0lb/jtP1/wx9WU663mnT/SO5bveYidPgtNO/rae1Y+8zEKX7hrNTr9bm1mszXzajNeb5L3nmZmVNum420/5ePvMd/RebRtldT+Zk/TE9vWW09Y+JHVfVHvMWu3CcGkvPP8Np48lOPTifjMfrLTwZW97Xnm08y19MdcceGscQAOruAAAAAAAAAAAAAAAAAAAAAAAAAAAAtd4H9cYOqenMWh1GStd00OOMeWkz3vWIiIvHziYjv8pSIpP0PvuTpvqnQ7xS2WK4MkTkrjnib0+Ne/af0lb3o7qjaOq9ppuO0amuSnpfHMxF8dvjFq+vLV7Troy09lefxR8YY7edvnDf2tI/DPwlmwF0ogAAAAAAAAHTrdTh0ejz6vPeKYsOO2S9p9IiI5lxa0VjmXNaza3EIu9pnedHp+hJ2j+JpGr1eox8Yon8U1rPmmf05iFZGS6m3nWb/vmq3XXZbXy6jJNuLTz5I57Vj6RHZjWF1mpnU5ZyPQdDpY0uGMcTyAIqYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANg6E6r3LpDfKbnt9vNH5c2G0/hy1+U/7S18c1tNZ5h1tWLRNbR0XJ6C662LrHQRm2/PGPU1iPe6bJMRkpPx7fGPlLL7HumPdP4y+GeaYNRbBz85rxz/AFlSbQ6zVaHU11Oi1GXT5q/lvjvNbR94b54P+Iuo6S33N/MsmbUbdrrc6jmZtal//Uj69+/z+y9wb1ebVjL285Z7UbFSK3nF38ola8eLZd12/edvx6/bNXi1OnyRzW+O3P2n5S9rS0vF4i1Z5iWWvS1Jmto4mAB2dQAAABHftCb3baPDrU4cV5rl11o01Z/yz+b78cpEV19qbfI1G/aDYMVua6TF77NET289vyx9o5/7oVu65vZ6a3XrPT6/ss9nw+11denSOv8AH/ULgMY3YAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADMdL9S7301ro1ez6/LprcxNqRPNL/S1fSU+eH/jbtO7ZMeh6ix12zVWiIrm5mcN5+s/3fv2+qtYlabWZdNPNJ/t5Imq0OHVRxkjr6+a+GLJTLjrkx3relo5i1Z5iX0rb4A+IWs27edP01uuptl2/UzGPT2yW/wChf4R+k+nH6LJNdodZXVU8URxMd4YrX6G+jyeGZ5ie0gCaggAPPuWrw6Hb9RrM+StMWDHOS9rTxEREesz9lKurt4z9QdS6/eNTfzX1OabR9K+lY+0RELHe0f1Di2roW+2UyTGq3O0Y6Vj/AARPN5n6cdvuq4yu95/FljHHaPnLX7Bp/BhnLPe3ygAUi/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAc1mazFqzMTHeJj4LIezn1xuG/wCn1Ow7tltqNRo8UZMOe082vj54mLT8ZjmO/wAVbm/+AG6Ytr8StHfUaummwZ8eTDebzxFuY5iv/dEJmgzzhz1tE8Rz1/ZB3HTxn01qzHM8cx+62Y4rMWrFqzExPeJhy3Lz8ABWz2p8lrdZbfjm0zWmj5iPlzaUQJj9qnT3p1ZtmomPwZdJMRP1i08x/VDjC6/n7zfn1eg7dx91x8egAiJoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA5iZieY7S4AWw9n/qDPv/h9hnVRe2bQ5Z0t8lp5955YiYnn9LRE8pCV69lPcrY933barZJ8mXFXNSnPbzRPEz+0wsK2m1ZZy6avM9Y6fx/xhN3wxi1VunSev8/9AFirET+1Dk910Bp4rjxWnNrqY7WtH4qx5b27fXmvH6cqyrFe1dgx26Z2fUTSfPTW2pFvhEWpMzz+vlj9pV1Yzdp/9Vv7fJutmj/x1/v8wBWrQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABtvhH1FfprrrQazmsYM2SNPn809opaYiZ+3r+nK4kTzETHxVE8Fdsw7p19osGr2edy0kTM5qzSbUx9uYtbjtxzHHf5rd1iKxERHER2iGm2Hxezvz25/+/wCGT+0U19pTjvx/8/y5AX7OoQ9qj+dX2zbsePT0ts9MnvcuSK/irl71rzPPaOLT6fdXxY32q9RrMXS+1afFesaXNq7e+jjvNq15r+kev3iFcmK3WONVdu9nnnR0+vMAV6zAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAT97KGLb/4Tec0TP8AMYyUraP/AMXHbj78/wBE6Ka+GPUO69O9X6LPtdrWnPmphy4Y44zVtaI8vf48z2lcms81iZjjmGr2TNF8M0448Px5Y7fsFqZ4yc8xb4ccOQaV4xdXaro3pT+Y6GmnvqsuWMWKubnjvHrxHrx+q0z5q4Mc5L9oVGnwWz5Ix07y0T2o9+2y22aLp73Xvtd72NTF63iPcxETHEx6zM8z+yvr379u+4b7uubc901M6jVZp5veYiP2iO0Q8DEarPOoyzknzb/R6aNNhrjjyAEdJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAe/p3X02vf8Ab9zyYpy00mqx55pE8TaK2i3HP2WJ8VPEja58NI1Owbx7rcdwrjjDXDePe4omYm8W+McR5o5+fH2rOJGHVXw0tSvayLn0mPPel7d6pe6K8ct52vHi0u+6Wu56fHXyxkrPly/efSezf+tce3+LPhhOu2TJxqtLznx4b/mrkrH4sdvrMdon07wrE2ToXrPeejdXqNRtP8PeNTj8mXHnpNqT68T2mJ5jmfj8X3xa6/hnFlnms/D9nwzbdj8cZsMeG8fH15a2OzUZZzZ8ma1aVnJabTFK8VjmeeIj4Q60BYgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//Z"
+      x="900" y="72" width="110" height="188"
+      style="opacity:0.65;mix-blend-mode:screen"/>
+
+    <!-- Taipei dot — northern end of Taiwan -->
+    <circle cx="978" cy="90" r="14" fill="none" stroke="rgba(0,212,255,.18)" stroke-width="1">
+      <animate attributeName="r" values="8;18;8" dur="2.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0;1" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="978" cy="90" r="5" fill="#00D4FF" filter="url(#glow-chip)"/>
+
+    <!-- Taipei label — left of island -->
+    <rect x="850" y="74" width="92" height="34" rx="2" fill="rgba(10,15,30,.78)"/>
+    <text x="856" y="87" font-family="'Space Mono',monospace" font-size="9" font-weight="700" fill="#00D4FF" letter-spacing="0.3">台北 TPE</text>
+    <text x="856" y="101" font-family="'Noto Sans TC',sans-serif" font-size="9" fill="rgba(255,255,255,.5)">CI直飛13.5小時</text>
+
+    <!-- Hsinchu dot — west coast -->
+    <circle cx="958" cy="110" r="4" fill="rgba(0,212,255,.5)" stroke="rgba(0,212,255,.8)" stroke-width="1"/>
+    <text x="850" y="114" font-family="'Noto Sans TC',sans-serif" font-size="9" fill="rgba(255,255,255,.5)">新竹科學園區</text>
+
+    <!-- Main arc: Phoenix → Taipei -->
+    <path d="M 155,210 C 380,20 680,10 978,90"
+      fill="none" stroke="rgba(0,212,255,.3)" stroke-width="1.2" stroke-dasharray="6,4"/>
+    <!-- Supply chain arc: Phoenix → Hsinchu -->
+    <path d="M 155,210 C 390,45 700,45 958,110"
+      fill="none" stroke="rgba(232,184,109,.22)" stroke-width="1" stroke-dasharray="4,4"/>
+
+    <!-- Animated dot — flight path -->
+    <circle r="3" fill="#00D4FF" opacity="0.9">
+      <animateMotion dur="4s" repeatCount="indefinite" path="M 155,210 C 380,20 680,10 978,90"/>
+      <animate attributeName="opacity" values="0;1;1;0" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Animated dot — supply chain -->
+    <circle r="2.5" fill="#E8B86D" opacity="0.8">
+      <animateMotion dur="5s" repeatCount="indefinite" begin="1.5s" path="M 155,210 C 390,45 700,45 958,110"/>
+      <animate attributeName="opacity" values="0;1;1;0" dur="5s" repeatCount="indefinite" begin="1.5s"/>
+    </circle>
+
+    <!-- legend bottom-left -->
+    <text x="30" y="402" font-family="'Space Mono',monospace" font-size="9" fill="rgba(255,255,255,.3)" letter-spacing="1">// 台灣 → 亞利桑那・供應鏈遷移示意圖</text>
+
+    <!-- legend items -->
+    <line x1="870" y1="398" x2="890" y2="398" stroke="rgba(0,212,255,.5)" stroke-width="1.2" stroke-dasharray="4,3"/>
+    <text x="894" y="401" font-family="'Space Mono',monospace" font-size="8" fill="rgba(0,212,255,.6)">直飛航線</text>
+    <line x1="948" y1="398" x2="968" y2="398" stroke="rgba(232,184,109,.4)" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="972" y="401" font-family="'Space Mono',monospace" font-size="8" fill="rgba(232,184,109,.6)">供應鏈移轉</text>
+  </svg>
+</div>
+
+<!-- ━━━━━━━━━━━━━━ 產業篇 ━━━━━━━━━━━━━━ -->
+<hr class="divider">
+<div class="chapter-bar" id="industry">
+  <div class="chapter-bar-inner">
+    <span class="chapter-num">CHAPTER 01</span>
+    <div class="chapter-pipe"></div>
+    <span class="chapter-name">產業篇・半導體供應鏈 × 台商投資 × 航太科技</span>
+  </div>
+</div>
+
+<!-- Topic 1 Lead -->
+<div style="background:var(--surface);padding:2.5rem 0 0">
+  <div class="section-wrap" style="padding-top:2rem;padding-bottom:2rem">
+    <div class="section-label">重點報導・Topic 1</div>
+    <div class="section-title">跟台積電走！在沙漠打造強大半導體供應鏈</div>
+    <div class="section-sub">聖暉、銳澤跟進設點，台廠在美落地的機會與挑戰。</div>
+  </div>
+  <div style="max-width:1100px;margin:0 auto;padding:0 4rem 3rem">
+    <div class="lead-card">
+      <div class="lead-img-wrap">
+        <img src="" alt="台積電亞利桑那晶圓廠供應鏈" style="background:var(--silicon-mid);min-height:360px;display:block">
+        <div class="lead-img-cap">台積電亞利桑那廠區帶動逾百家供應鏈企業評估跟進。（圖／TVBS提供）</div>
+      </div>
+      <div class="lead-body">
+        <div>
+          <div class="lead-kicker">半導體供應鏈</div>
+          <h2>跟台積電走！沙漠打造強大半導體供應鏈</h2>
+          <p class="teaser">台積電宣布投資亞利桑那後，無塵室機電整合大廠<strong>聖暉</strong>與氣體二次配夥伴<strong>銳澤</strong>接連跟進。台商到美設點，面臨人力、法規、成本與工期四大挑戰，但市場磁吸力道之強，讓台灣供應鏈不得不動。</p>
+          <p class="teaser">台積電近期持續在亞利桑那購地、動工，第三座晶圓廠訊號已明確，供應鏈布局只是開始。</p>
+          <a class="read-more" href="#">閱讀完整報導</a>
+        </div>
+        <div class="card-meta">Tags：半導體供應鏈・台積電・聖暉・銳澤・矽沙漠</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Topic 4 & 9 -->
+<div style="max-width:1100px;margin:0 auto;padding:0 4rem 4rem">
+  <div class="grid-2">
+    <div class="art-card">
+      <div style="width:100%;height:200px;background:linear-gradient(135deg,var(--silicon) 0%,var(--silicon-mid) 100%);display:flex;align-items:center;justify-content:center">
+        <div style="font-family:var(--mono);font-size:2.5rem;font-weight:700;color:var(--sand);letter-spacing:.05em">ACA</div>
+      </div>
+      <div class="art-card-body">
+        <div class="art-kicker">Topic 4・台商投資</div>
+        <h3>台積電磁吸效應發威！ACA、貿協、經濟部助攻台企揪團赴亞利桑那</h3>
+        <p>傳典購地、廣源與精誠觀察，亞利桑那州商務廳總裁親揭台積電確認投資當下的心情。</p>
+        <div class="art-tags">
+          <span class="tag">ACA</span><span class="tag">貿協</span><span class="tag">台商投資</span>
+        </div>
+        <a class="read-more" href="#" style="margin-top:1rem;display:inline-flex">閱讀完整報導</a>
+      </div>
+    </div>
+    <div class="art-card">
+      <div style="width:100%;height:200px;background:linear-gradient(135deg,#0A1628 0%,#1A2744 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.4rem">
+        <div style="font-family:var(--mono);font-size:1.4rem;font-weight:700;color:var(--chip);letter-spacing:.1em">AIDC</div>
+        <div style="font-family:var(--display);font-size:.75rem;color:rgba(255,255,255,.4);letter-spacing:.12em;text-transform:uppercase">Honeywell・AS9100</div>
+      </div>
+      <div class="art-card-body">
+        <div class="art-kicker">Topic 9・航太科技</div>
+        <h3>不只半導體！漢翔赴亞利桑那40年淵源，飛行訓練人才在沙漠起飛</h3>
+        <p>漢翔美國子公司布局與Honeywell深度合作，UND飛行訓練中心台灣學生創歷史新高。</p>
+        <div class="art-tags">
+          <span class="tag">漢翔</span><span class="tag">UND</span><span class="tag">Buy American</span>
+        </div>
+        <a class="read-more" href="#" style="margin-top:1rem;display:inline-flex">閱讀完整報導</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DATA BAND -->
+<div class="data-band">
+  <div class="data-band-inner">
+    <div class="section-label">關鍵數字</div>
+    <div class="section-title" style="color:white">台積電效應・數字說話</div>
+    <div class="stat-grid">
+      <div class="stat-block">
+        <div class="stat-num">360<span class="stat-unit">天</span></div>
+        <div class="stat-desc">亞利桑那一年近360天晴天，是飛行訓練基地的決定性優勢</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num">3.5<span class="stat-unit">次</span></div>
+        <div class="stat-desc">台積電一滴水循環使用次數，台南再生水經驗移植亞利桑那</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num">400<span class="stat-unit">%</span></div>
+        <div class="stat-desc">台灣與鳳凰城旅客數成長，從每日25人躍升至140人以上</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num">471<span class="stat-unit">%</span></div>
+        <div class="stat-desc">2025年來自台灣的訪客成長幅度，鳳凰城機場統計</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ━━━━━━━━━━━━━━ 城市篇 ━━━━━━━━━━━━━━ -->
+<hr class="divider">
+<div class="chapter-bar" id="city">
+  <div class="chapter-bar-inner">
+    <span class="chapter-num">CHAPTER 02</span>
+    <div class="chapter-pipe"></div>
+    <span class="chapter-name">城市篇・造鎮開發 × 水資源 × 航空運輸</span>
+  </div>
+</div>
+
+<!-- Topic 2 -->
+<div class="section-wrap" style="padding-bottom:2rem">
+  <div class="section-label">重點報導・Topic 2</div>
+</div>
+<div style="max-width:1100px;margin:0 auto;padding:0 4rem 3rem">
+  <div class="wide-feat">
+    <div class="wide-feat-body">
+      <div class="lead-kicker">北鳳凰城・造鎮</div>
+      <h2 style="font-family:var(--display);font-size:1.6rem;font-weight:700;color:var(--ink);letter-spacing:-.02em;line-height:1.2;margin-bottom:1rem">台積電重塑北鳳凰城<br>沙漠造鎮、房市升溫到亞洲生活圈成形</h2>
+      <p style="font-size:.92rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1.5rem">Halo Vista規劃住宅、商業、教育、研發一體，Intel退休工程師轉身成為商場開發者，北鳳凰城正長出一個「小台北」生活圈。外派家庭、工程師、供應商帶動住宅市場持續升溫。</p>
+      <a class="read-more" href="#">閱讀完整報導</a>
+      <div class="art-tags" style="margin-top:1rem">
+        <span class="tag">Halo Vista</span><span class="tag">北鳳凰城</span><span class="tag">亞洲生活圈</span>
+      </div>
+    </div>
+    <div class="wide-feat-img">
+      <div style="width:100%;height:100%;min-height:340px;background:linear-gradient(160deg,#E8B86D22 0%,var(--silicon-mid) 100%);display:flex;align-items:center;justify-content:center">
+        <div style="text-align:center">
+          <div style="font-family:var(--mono);font-size:.9rem;color:rgba(255,255,255,.3);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.5rem">Halo Vista</div>
+          <div style="font-family:var(--display);font-size:1.1rem;color:var(--sand);font-weight:700">North Phoenix</div>
+          <div style="font-family:var(--display);font-size:.85rem;color:rgba(255,255,255,.4);margin-top:.3rem">造鎮開發示意</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Topic 5 Water -->
+<div style="background:var(--surface);padding:3rem 0">
+  <div class="section-wrap" style="padding-top:2rem;padding-bottom:2rem">
+    <div class="section-label">重點報導・Topic 5</div>
+    <div class="section-title">一滴水用3.5次</div>
+    <div class="section-sub">台積電從台南到亞利桑那的水資源布局，破解「沙漠缺水不能發展半導體」的迷思。</div>
+  </div>
+  <div style="max-width:1100px;margin:0 auto;padding:0 4rem 3rem">
+    <div class="water-module">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center">
+        <div>
+          <div class="water-big">3.5<span>×</span></div>
+          <div style="text-align:center;font-family:var(--display);font-size:.95rem;color:rgba(255,255,255,.6);line-height:1.7">台積電水循環率<br>每一滴水平均使用3.5次</div>
+        </div>
+        <div>
+          <div style="font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--chip);margin-bottom:1rem">// 水循環流程</div>
+          <div class="water-flow">
+            <div class="water-step"><div class="water-step-num">01</div><div class="water-step-name">取水</div></div>
+            <div class="water-arrow">→</div>
+            <div class="water-step"><div class="water-step-num">02</div><div class="water-step-name">製程用水</div></div>
+            <div class="water-arrow">→</div>
+            <div class="water-step"><div class="water-step-num">03</div><div class="water-step-name">回收處理</div></div>
+            <div class="water-arrow">→</div>
+            <div class="water-step" style="background:rgba(0,212,255,.12)"><div class="water-step-num" style="color:var(--sand)">04</div><div class="water-step-name">再利用</div></div>
+          </div>
+          <p style="font-size:.875rem;color:rgba(255,255,255,.5);line-height:1.85;margin-top:1.2rem">台南南科再生水廠的成功經驗，正複製到水資源敏感的亞利桑那。鳳凰城地下水、再生水與百年水權制度，構成半導體落腳沙漠的水資源保障。</p>
+          <a class="btn btn-chip" href="#" style="margin-top:1.2rem;display:inline-block">閱讀完整報導</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Topic 10 Aviation Lead -->
+<div style="background:var(--silicon);padding:4rem 0">
+  <div style="max-width:1100px;margin:0 auto;padding:0 4rem" id="aviation">
+    <div class="section-label" style="color:var(--chip)"><span style="opacity:.4">//</span>重點報導・Topic 10</div>
+    <div class="section-title" style="color:white">台積電效益外溢至航空業！</div>
+    <div class="section-sub" style="color:rgba(255,255,255,.5)">華航直飛鳳凰城載客率逾8成，機場台客暴增400%。</div>
+    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(0,212,255,.15);padding:2.5rem;margin-top:1rem">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center">
+        <div>
+          <div style="font-family:var(--mono);font-size:.8rem;color:var(--chip);letter-spacing:.1em;margin-bottom:.8rem">CI直飛 台北TPE → 鳳凰城PHX</div>
+          <div style="font-family:var(--display);font-size:1.55rem;font-weight:700;color:white;line-height:1.2;margin-bottom:1rem">2025年12月開航<br>商務艙載客率達8至9成</div>
+          <p style="font-size:.9rem;color:rgba(255,255,255,.6);line-height:1.9;margin-bottom:1.5rem">高科技外派人員、返台休假、訓練家屬探親創造穩定需求。鳳凰城過去是美國沒有亞洲直飛服務的最大市場，台積電效應讓這座城市正式進入亞洲航線版圖。</p>
+          <a class="btn btn-sand" href="#">閱讀完整報導</a>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.08)">
+          <div style="background:rgba(10,15,30,.6);padding:1.5rem;text-align:center">
+            <div style="font-family:var(--mono);font-size:2.2rem;font-weight:700;color:var(--sand)">8<span style="font-size:1rem">成+</span></div>
+            <div style="font-family:var(--display);font-size:12px;color:rgba(255,255,255,.45);margin-top:.3rem">平均月載客率</div>
+          </div>
+          <div style="background:rgba(10,15,30,.6);padding:1.5rem;text-align:center">
+            <div style="font-family:var(--mono);font-size:2.2rem;font-weight:700;color:var(--chip)">471<span style="font-size:1rem">%</span></div>
+            <div style="font-family:var(--display);font-size:12px;color:rgba(255,255,255,.45);margin-top:.3rem">台灣訪客成長</div>
+          </div>
+          <div style="background:rgba(10,15,30,.6);padding:1.5rem;text-align:center">
+            <div style="font-family:var(--mono);font-size:2.2rem;font-weight:700;color:var(--oasis)">140<span style="font-size:1rem">人+</span></div>
+            <div style="font-family:var(--display);font-size:12px;color:rgba(255,255,255,.45);margin-top:.3rem">每日台灣旅客</div>
+          </div>
+          <div style="background:rgba(10,15,30,.6);padding:1.5rem;text-align:center">
+            <div style="font-family:var(--mono);font-size:2.2rem;font-weight:700;color:var(--sand)">13.5<span style="font-size:1rem">hr</span></div>
+            <div style="font-family:var(--display);font-size:12px;color:rgba(255,255,255,.45);margin-top:.3rem">直飛飛行時數</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ━━━━━━━━━━━━━━ 人才與生活篇 ━━━━━━━━━━━━━━ -->
+<hr class="divider">
+<div class="chapter-bar" id="life">
+  <div class="chapter-bar-inner">
+    <span class="chapter-num">CHAPTER 03</span>
+    <div class="chapter-pipe"></div>
+    <span class="chapter-name">人才與生活篇・人才培育 × 台灣移民 × 台灣品牌 × 小台北</span>
+  </div>
+</div>
+
+<!-- Topic 3 Education -->
+<div class="section-wrap">
+  <div class="section-label">重點報導・Topic 3</div>
+  <div class="section-title">半導體人才培育從幼兒園啟蒙</div>
+  <div class="section-sub">ASU、Arizona Science Center、West-MEC串起K-12到大學的完整人才鏈。</div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--rule);margin-top:2rem">
+    <div style="padding:1.6rem 1.4rem;border-right:1px solid var(--rule);background:white">
+      <div style="font-family:var(--mono);font-size:.75rem;font-weight:700;color:var(--chip);letter-spacing:.1em;margin-bottom:.5rem">STAGE 01</div>
+      <div style="font-family:var(--display);font-size:.95rem;font-weight:700;color:var(--ink);margin-bottom:.4rem">幼兒園啟蒙</div>
+      <div style="font-family:var(--display);font-size:.8rem;color:var(--sand-dark);font-weight:600;margin-bottom:.5rem">Arizona Science Center</div>
+      <div style="font-size:.82rem;color:var(--ink-mid);line-height:1.7">半導體教育向下扎根，從動手做科學開始</div>
+    </div>
+    <div style="padding:1.6rem 1.4rem;border-right:1px solid var(--rule);background:var(--surface)">
+      <div style="font-family:var(--mono);font-size:.75rem;font-weight:700;color:var(--chip);letter-spacing:.1em;margin-bottom:.5rem">STAGE 02</div>
+      <div style="font-family:var(--display);font-size:.95rem;font-weight:700;color:var(--ink);margin-bottom:.4rem">高中技職</div>
+      <div style="font-family:var(--display);font-size:.8rem;color:var(--sand-dark);font-weight:600;margin-bottom:.5rem">West-MEC</div>
+      <div style="font-size:.82rem;color:var(--ink-mid);line-height:1.7">由產業共同設計課程，TSMC、Intel、Amkor參與</div>
+    </div>
+    <div style="padding:1.6rem 1.4rem;border-right:1px solid var(--rule);background:white">
+      <div style="font-family:var(--mono);font-size:.75rem;font-weight:700;color:var(--chip);letter-spacing:.1em;margin-bottom:.5rem">STAGE 03</div>
+      <div style="font-family:var(--display);font-size:.95rem;font-weight:700;color:var(--ink);margin-bottom:.4rem">大學AI研究</div>
+      <div style="font-family:var(--display);font-size:.8rem;color:var(--sand-dark);font-weight:600;margin-bottom:.5rem">Arizona State University</div>
+      <div style="font-size:.82rem;color:var(--ink-mid);line-height:1.7">強調AI發展，與台積電深度合作育才</div>
+    </div>
+    <div style="padding:1.6rem 1.4rem;background:var(--sand);position:relative;overflow:hidden">
+      <div style="position:absolute;top:-10px;right:-10px;width:60px;height:60px;border-radius:50%;background:rgba(255,255,255,.15)"></div>
+      <div style="font-family:var(--mono);font-size:.75rem;font-weight:700;color:rgba(10,15,30,.6);letter-spacing:.1em;margin-bottom:.5rem">OUTCOME</div>
+      <div style="font-family:var(--display);font-size:.95rem;font-weight:700;color:var(--ink);margin-bottom:.4rem">半導體職場</div>
+      <div style="font-family:var(--display);font-size:.8rem;color:var(--ink);font-weight:600;margin-bottom:.5rem">TSMC・Intel・Amkor</div>
+      <div style="font-size:.82rem;color:rgba(10,15,30,.7);line-height:1.7">從教室到工廠，直接連結就業</div>
+    </div>
+  </div>
+  <a class="read-more" href="#" style="margin-top:1.5rem;display:inline-flex">閱讀完整報導</a>
+</div>
+
+<!-- OASIS QUOTE (Topic 6) -->
+<div class="oasis-band">
+  <div class="oasis-band-inner">
+    <div class="oasis-icon">
+      <img src="" alt="龍舟-台灣移民-鳳凰城-社群" style="width:48px;height:48px;object-fit:cover;display:block;border-radius:2px">
+    </div>
+    <div>
+      <div class="oasis-quote">「龍舟隊因台北與鳳凰城姊妹市淵源而生，成為台灣家庭在異鄉凝聚社群的方式。」</div>
+      <div class="oasis-source">Topic 6・沙漠中的台灣人・台灣移民落地人生</div>
+    </div>
+  </div>
+</div>
+
+<!-- Topic 6 & 7 & 8 grid -->
+<div class="section-wrap" style="padding-top:3rem">
+  <div class="section-label">重點報導・Topic 6 / 7 / 8</div>
+  <div class="section-title">台灣人的亞利桑那生活圈</div>
+  <div class="grid-3" style="margin-top:2rem">
+    <div class="art-card">
+      <div style="width:100%;height:190px;overflow:hidden;position:relative;background:linear-gradient(135deg,#1D8A5C 0%,var(--silicon-mid) 100%)">
+        <img src="" alt="台灣移民-慈濟-龍舟-鳳凰城" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+      </div>
+      <div class="art-card-body">
+        <div class="art-kicker">Topic 6・台灣移民</div>
+        <h3>沙漠中的台灣人　從醫療帳單痛點到龍舟隊凝聚的異鄉歸屬感</h3>
+        <p>Tiff從亞洲高階主管轉型跨文化顧問，慈濟北鳳凰城新據點成為社區客廳。</p>
+        <div class="art-tags"><span class="tag">台灣移民</span><span class="tag">慈濟</span><span class="tag">龍舟</span></div>
+        <a class="read-more" href="#" style="margin-top:1rem;display:inline-flex">閱讀完整報導</a>
+      </div>
+    </div>
+    <div class="art-card">
+      <div style="width:100%;height:190px;overflow:hidden;position:relative;background:linear-gradient(135deg,#C4913A 0%,#8B6914 100%)">
+        <img src="" alt="鼎泰豐-大魯閣-台灣品牌-鳳凰城" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+      </div>
+      <div class="art-card-body">
+        <div class="art-kicker">Topic 7・台灣品牌</div>
+        <h3>台灣品牌插旗鳳凰城　鼎泰豐、大魯閣迎戰美國市場</h3>
+        <p>鼎泰豐設Full Bar搭配噶瑪蘭威士忌，大魯閣轉型為親子娛樂場，台灣品牌在地化大考。</p>
+        <div class="art-tags"><span class="tag">鼎泰豐</span><span class="tag">大魯閣</span><span class="tag">餐飲在地化</span></div>
+        <a class="read-more" href="#" style="margin-top:1rem;display:inline-flex">閱讀完整報導</a>
+      </div>
+    </div>
+    <div class="art-card">
+      <div style="width:100%;height:190px;overflow:hidden;position:relative;background:linear-gradient(135deg,#0A1628 0%,#2E3F6A 100%)">
+        <img src="" alt="台灣美食-小台北-珍珠奶茶-鳳凰城" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+      </div>
+      <div class="art-card-body">
+        <div class="art-kicker">Topic 8・小台北</div>
+        <h3>亞洲味小台北成形　便當、臭豆腐、珍奶進駐鳳凰城</h3>
+        <p>熊鶴台式便當選址靠近台積電廠區，臭豆腐大王跨州展店，八方雲集、春水堂、大華超市集結成形。</p>
+        <div class="art-tags"><span class="tag">小台北</span><span class="tag">台灣美食</span><span class="tag">大華超市</span></div>
+        <a class="read-more" href="#" style="margin-top:1rem;display:inline-flex">閱讀完整報導</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PEOPLE QUOTES -->
+<div style="background:var(--surface);padding:4rem 0">
+  <div class="section-wrap" style="padding-top:2rem;padding-bottom:2rem">
+    <div class="section-label">人物群像</div>
+    <div class="section-title">矽沙漠的台灣面孔</div>
+  </div>
+  <div style="max-width:1100px;margin:0 auto;padding:0 4rem 2rem">
+    <div class="people-grid">
+      <div class="person-card">
+        <div class="person-role">跨文化顧問・創業家</div>
+        <div class="person-name">Tiff</div>
+        <div class="person-org">亞利桑那在地投資移民</div>
+        <div class="person-quote">「美國職場最難的不是技術，是直接說出你的需求，還有隱私界線。台灣人習慣拐彎抹角，這在這裡行不通。」</div>
+      </div>
+      <div class="person-card">
+        <div class="person-role">台積電綠色製造部</div>
+        <div class="person-name">曾惠馨</div>
+        <div class="person-org">副處長</div>
+        <div class="person-quote">「台南再生水廠打造水資源產線的經驗，是台積電在亞利桑那落地的底氣。沙漠不是問題，循環才是答案。」</div>
+      </div>
+      <div class="person-card">
+        <div class="person-role">UND飛行訓練中心</div>
+        <div class="person-name">Rex</div>
+        <div class="person-org">亞利桑那中心代表</div>
+        <div class="person-quote">「疫情後飛行訓練需求爆發，台灣學生學術準備最紮實。亞利桑那360天晴空是我們最好的教室。」</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FINAL OASIS CLOSER -->
+<div style="background:var(--ink);padding:5rem 0;text-align:center;position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(0,212,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,.03) 1px,transparent 1px);background-size:40px 40px"></div>
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(232,184,109,.08) 0%,transparent 60%)"></div>
+  <div style="position:relative;z-index:1;max-width:700px;margin:0 auto;padding:0 2rem">
+    <div style="font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--chip);margin-bottom:1.5rem">// 矽沙漠崛起・結語</div>
+    <div style="font-family:var(--display);font-size:clamp(1.8rem,4vw,3rem);font-weight:700;color:white;line-height:1.15;letter-spacing:-.02em;margin-bottom:1.5rem">台積電不只蓋了一座廠<br><span style="color:var(--sand)">而是改變了一座城市</span></div>
+    <p style="font-family:var(--body);font-size:1rem;color:rgba(255,255,255,.6);line-height:2;margin-bottom:2.5rem">從半導體供應鏈到龍舟隊，從再生水技術到小籠包，台積電的亞利桑那效應遠超過晶圓廠的邊界。矽沙漠崛起，台灣正在美國西南部寫下一個新的故事。</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      <a class="btn btn-sand" href="#">回到頂部</a>
+      <a class="btn btn-chip" href="#">TVBS新聞網</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-logo">
+    <img src="TVBS logo-white.png" alt="TVBS">TVBS新聞網
+  </div>
+  <div class="footer-topic">數位專題・矽沙漠崛起・台積電亞利桑那效應</div>
+  <hr class="footer-divider">
+  <div class="footer-meta">
+    採訪團隊／TVBS新聞網國際中心<br>
+    專題監製／黃貞怡<br>
+    數位設計・網頁製作／陳祖晴<br>
+    版權圖片，請勿轉載<br><br>
+    © 2026 TVBS新聞網　版權所有
+  </div>
+  <div class="footer-chip-line"></div>
+</footer>
+
+</body>
+</html>

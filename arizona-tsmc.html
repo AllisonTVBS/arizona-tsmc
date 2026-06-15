@@ -234,7 +234,9 @@ body{background:var(--surface-warm);color:var(--ink);font-family:var(--body);fon
   .grid-3,.people-grid{grid-template-columns:1fr}
   .grid-2{grid-template-columns:1fr}
   .stat-grid{grid-template-columns:1fr 1fr}
+  .stage-grid{grid-template-columns:1fr !important}
   .data-band-inner{padding:0 1.5rem}
+  #aviation{padding:0 1.5rem}
   .oasis-band-inner{flex-direction:column;gap:1.5rem;padding:0 1.5rem}
   .chapter-bar{padding:1rem 1.5rem}
   .chip-strip{padding:1rem 1.5rem}
@@ -623,30 +625,30 @@ body{background:var(--surface-warm);color:var(--ink);font-family:var(--body);fon
     <div class="section-title" style="color:white">台積電效益外溢至航空業！</div>
     <div class="section-sub" style="color:rgba(255,255,255,.5)">華航直飛鳳凰城載客率逾8成，機場台客暴增400%。</div>
     <div style="background:rgba(255,255,255,.04);border:1px solid rgba(0,212,255,.15);padding:2.5rem;margin-top:1rem">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center">
-        <div>
-          <div style="font-family:var(--mono);font-size:.8rem;color:var(--chip);letter-spacing:.1em;margin-bottom:.8rem">CI直飛 台北TPE → 鳳凰城PHX</div>
-          <div style="font-family:var(--display);font-size:1.55rem;font-weight:700;color:white;line-height:1.2;margin-bottom:1rem">2025年12月開航<br>商務艙載客率達8至9成</div>
-          <p style="font-size:.9rem;color:rgba(255,255,255,.6);line-height:1.9;margin-bottom:1.5rem">高科技外派人員、返台休假、訓練家屬探親創造穩定需求。鳳凰城過去是美國沒有亞洲直飛服務的最大市場，台積電效應讓這座城市正式進入亞洲航線版圖。</p>
-          <a class="btn btn-sand" href="#">閱讀完整報導</a>
+      <!-- 文字區 -->
+      <div style="margin-bottom:2rem">
+        <div style="font-family:var(--mono);font-size:.8rem;color:var(--chip);letter-spacing:.1em;margin-bottom:.8rem">CI直飛 台北TPE → 鳳凰城PHX</div>
+        <div style="font-family:var(--display);font-size:clamp(1.2rem,4vw,1.55rem);font-weight:700;color:white;line-height:1.2;margin-bottom:1rem">2025年12月開航<br>商務艙載客率達8至9成</div>
+        <p style="font-size:.9rem;color:rgba(255,255,255,.6);line-height:1.9;margin-bottom:1.5rem">高科技外派人員、返台休假、訓練家屬探親創造穩定需求。鳳凰城過去是美國沒有亞洲直飛服務的最大市場，台積電效應讓這座城市正式進入亞洲航線版圖。</p>
+        <a class="btn btn-sand" href="#">閱讀完整報導</a>
+      </div>
+      <!-- 數字格 2×2 -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.08)">
+        <div style="background:rgba(10,15,30,.6);padding:1.2rem;text-align:center">
+          <div style="font-family:var(--mono);font-size:clamp(1.6rem,5vw,2.2rem);font-weight:700;color:var(--sand)">8<span style="font-size:.85rem">成+</span></div>
+          <div style="font-family:var(--display);font-size:11px;color:rgba(255,255,255,.45);margin-top:.3rem">平均月載客率</div>
         </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.08)">
-          <div style="background:rgba(10,15,30,.6);padding:1.5rem;text-align:center">
-            <div style="font-family:var(--mono);font-size:2.2rem;font-weight:700;color:var(--sand)">8<span style="font-size:1rem">成+</span></div>
-            <div style="font-family:var(--display);font-size:12px;color:rgba(255,255,255,.45);margin-top:.3rem">平均月載客率</div>
-          </div>
-          <div style="background:rgba(10,15,30,.6);padding:1.5rem;text-align:center">
-            <div style="font-family:var(--mono);font-size:2.2rem;font-weight:700;color:var(--chip)">471<span style="font-size:1rem">%</span></div>
-            <div style="font-family:var(--display);font-size:12px;color:rgba(255,255,255,.45);margin-top:.3rem">台灣訪客成長</div>
-          </div>
-          <div style="background:rgba(10,15,30,.6);padding:1.5rem;text-align:center">
-            <div style="font-family:var(--mono);font-size:2.2rem;font-weight:700;color:var(--oasis)">140<span style="font-size:1rem">人+</span></div>
-            <div style="font-family:var(--display);font-size:12px;color:rgba(255,255,255,.45);margin-top:.3rem">每日台灣旅客</div>
-          </div>
-          <div style="background:rgba(10,15,30,.6);padding:1.5rem;text-align:center">
-            <div style="font-family:var(--mono);font-size:2.2rem;font-weight:700;color:var(--sand)">13.5<span style="font-size:1rem">hr</span></div>
-            <div style="font-family:var(--display);font-size:12px;color:rgba(255,255,255,.45);margin-top:.3rem">直飛飛行時數</div>
-          </div>
+        <div style="background:rgba(10,15,30,.6);padding:1.2rem;text-align:center">
+          <div style="font-family:var(--mono);font-size:clamp(1.6rem,5vw,2.2rem);font-weight:700;color:var(--chip)">471<span style="font-size:.85rem">%</span></div>
+          <div style="font-family:var(--display);font-size:11px;color:rgba(255,255,255,.45);margin-top:.3rem">台灣訪客成長</div>
+        </div>
+        <div style="background:rgba(10,15,30,.6);padding:1.2rem;text-align:center">
+          <div style="font-family:var(--mono);font-size:clamp(1.6rem,5vw,2.2rem);font-weight:700;color:var(--oasis)">140<span style="font-size:.85rem">人+</span></div>
+          <div style="font-family:var(--display);font-size:11px;color:rgba(255,255,255,.45);margin-top:.3rem">每日台灣旅客</div>
+        </div>
+        <div style="background:rgba(10,15,30,.6);padding:1.2rem;text-align:center">
+          <div style="font-family:var(--mono);font-size:clamp(1.6rem,5vw,2.2rem);font-weight:700;color:var(--sand)">13.5<span style="font-size:.85rem">hr</span></div>
+          <div style="font-family:var(--display);font-size:11px;color:rgba(255,255,255,.45);margin-top:.3rem">直飛飛行時數</div>
         </div>
       </div>
     </div>
@@ -668,7 +670,7 @@ body{background:var(--surface-warm);color:var(--ink);font-family:var(--body);fon
   <div class="section-label">重點報導・Topic 3</div>
   <div class="section-title">半導體人才培育從幼兒園啟蒙</div>
   <div class="section-sub">ASU、Arizona Science Center、West-MEC串起K-12到大學的完整人才鏈。</div>
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--rule);margin-top:2rem">
+  <div class="stage-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--rule);margin-top:2rem">
     <div style="padding:1.6rem 1.4rem;border-right:1px solid var(--rule);background:white">
       <div style="font-family:var(--mono);font-size:.75rem;font-weight:700;color:var(--chip);letter-spacing:.1em;margin-bottom:.5rem">STAGE 01</div>
       <div style="font-family:var(--display);font-size:.95rem;font-weight:700;color:var(--ink);margin-bottom:.4rem">幼兒園啟蒙</div>

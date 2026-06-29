@@ -641,32 +641,65 @@ function goSlide(n){cur=n;document.getElementById('map-slides').style.transform=
 </div>
 
 <!-- Topic 5 Water -->
-<div style="background:var(--surface);padding:3rem 0;position:relative;background-image:url('一堆仙人掌.jpg');background-size:cover;background-position:center">
-  <div style="position:absolute;inset:0;background:rgba(244,246,252,.7);pointer-events:none;z-index:0"></div>
-  <div style="position:relative;z-index:1">
+<div style="background:var(--surface);padding:3rem 0">
+  <div>
   <div class="section-wrap" style="padding-top:2rem;padding-bottom:2rem">
     <div class="section-label">重點報導・三</div>
-    <div class="section-title">一滴水用3.5次<br>台積電從台南到亞利桑那的水資源布局</div>
-    <div class="section-sub">台積電於台南再生水廠打造水資源產線，供應南科晶圓生產，利用水回收、水循環與再生水布局，破解「沙漠缺水不能發展半導體」的迷思。</div>
+    <div class="section-title">當晶圓廠蓋在沙漠<br>台積電如何把水資源變成最強競爭力</div>
+    <div class="section-sub">製造一片12吋晶圓需耗費2,000至4,000公升的水。台積電的答案是一滴水用3.5次，並在亞利桑那自建再生水廠，目標達90%水回收率。</div>
+  </div>
+  <div style="max-width:1100px;margin:0 auto;padding:0 4rem 1.5rem">
+    <div style="overflow:hidden;position:relative;margin-bottom:1.5rem">
+      <img src="20260627105321-7307e4e9.jpg" alt="台積電水資源-亞利桑那-再生水廠" style="width:100%;display:block;max-height:460px;object-fit:cover">
+      <div style="font-family:var(--display);font-size:12px;color:var(--ink-soft);padding:.5rem 0">台積電亞利桑那工業再生水廠（Industrial Water Reclamation Plant, IWRP）。（圖／台積電提供，僅供本報導使用）</div>
+    </div>
   </div>
   <div style="max-width:1100px;margin:0 auto;padding:0 4rem 3rem">
     <div class="water-module">
       <div>
-          <div style="font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--chip);margin-bottom:1rem">// 水循環流程</div>
-          <div class="water-flow">
-            <div class="water-step"><div class="water-step-num">01</div><div class="water-step-name">取水</div></div>
-            <div class="water-arrow">→</div>
-            <div class="water-step"><div class="water-step-num">02</div><div class="water-step-name">製程用水</div></div>
-            <div class="water-arrow">→</div>
-            <div class="water-step"><div class="water-step-num">03</div><div class="water-step-name">回收處理</div></div>
-            <div class="water-arrow">→</div>
-            <div class="water-step" style="background:rgba(0,212,255,.12)"><div class="water-step-num" style="color:var(--sand)">04</div><div class="water-step-name">再利用</div></div>
+        <div style="font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--chip);margin-bottom:1rem">// 台積電水資源管理三階段</div>
+
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.08);margin-bottom:1.5rem">
+          <div style="background:rgba(10,15,30,.4);padding:1.2rem 1rem">
+            <div style="font-family:var(--mono);font-size:.7rem;color:var(--chip);letter-spacing:.1em;margin-bottom:.4rem">STAGE 01</div>
+            <div style="font-family:var(--display);font-size:.9rem;font-weight:700;color:white;margin-bottom:.3rem">廠內水循環</div>
+            <div style="font-size:.8rem;color:rgba(255,255,255,.5);line-height:1.6">一滴水用3.5次，廠內循環效率極致化</div>
           </div>
-          <p style="font-size:.875rem;color:rgba(255,255,255,.5);line-height:1.85;margin-top:1.2rem">台南南科再生水廠的成功經驗，正複製到水資源敏感的亞利桑那。鳳凰城地下水、再生水與百年水權制度，構成半導體落腳沙漠的水資源保障。</p>
-          <a class="btn btn-chip" href="#" style="margin-top:1.2rem;display:inline-block">閱讀完整報導</a>
+          <div style="background:rgba(10,15,30,.4);padding:1.2rem 1rem">
+            <div style="font-family:var(--mono);font-size:.7rem;color:var(--chip);letter-spacing:.1em;margin-bottom:.4rem">STAGE 02</div>
+            <div style="font-family:var(--display);font-size:.9rem;font-weight:700;color:white;margin-bottom:.3rem">開發替代水源</div>
+            <div style="font-size:.8rem;color:rgba(255,255,255,.5);line-height:1.6">導入工業再生水與市政再生水，降低自來水依賴</div>
+          </div>
+          <div style="background:rgba(0,212,255,.1);padding:1.2rem 1rem;border:1px solid rgba(0,212,255,.2)">
+            <div style="font-family:var(--mono);font-size:.7rem;color:var(--chip);letter-spacing:.1em;margin-bottom:.4rem">STAGE 03</div>
+            <div style="font-family:var(--display);font-size:.9rem;font-weight:700;color:white;margin-bottom:.3rem">水資源正效益</div>
+            <div style="font-size:.8rem;color:rgba(255,255,255,.5);line-height:1.6">回饋環境比取用更多，讓環境因台積電而更好</div>
+          </div>
         </div>
+
+        <div style="font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--chip);margin-bottom:1rem">// 水循環流程</div>
+        <div class="water-flow">
+          <div class="water-step"><div class="water-step-num">01</div><div class="water-step-name">取水</div></div>
+          <div class="water-arrow">→</div>
+          <div class="water-step"><div class="water-step-num">02</div><div class="water-step-name">製程用水</div></div>
+          <div class="water-arrow">→</div>
+          <div class="water-step"><div class="water-step-num">03</div><div class="water-step-name">回收處理</div></div>
+          <div class="water-arrow">→</div>
+          <div class="water-step" style="background:rgba(0,212,255,.12)"><div class="water-step-num" style="color:var(--sand)">04</div><div class="water-step-name">再利用</div></div>
+        </div>
+
+        <div style="border-left:2px solid rgba(0,212,255,.4);padding:.7rem 1rem;background:rgba(0,212,255,.06);margin-top:1.2rem;margin-bottom:.8rem">
+          <div style="font-size:.88rem;color:rgba(255,255,255,.8);line-height:1.8;font-style:italic">「這似乎有違直覺，我們住在沙漠裡，卻擁有充足的水源供應。」</div>
+          <div style="font-family:var(--display);font-size:.78rem;color:var(--chip);font-weight:600;margin-top:.3rem">GPEC總裁 Christine Mackay</div>
+        </div>
+
+        <p style="font-size:.875rem;color:rgba(255,255,255,.6);line-height:1.85;margin-top:.8rem">亞利桑那廠正興建占地15英畝的工業再生水廠（IWRP），預計2028年啟動，三廠全速運轉後可使市政用水需求驟降至25%。鳳凰城擁有五種水源，1980年《地下水管理法》要求新企業取得「100年確保供水證明」。</p>
+        <p style="font-size:.875rem;color:rgba(255,255,255,.6);line-height:1.85;margin-top:.8rem">台積電不全盤複製台灣：亞利桑那改開放渠道為密閉式輸水減少蒸發；日本熊本則鼓勵農民冬季種稻補注地下水，公司收購稻米供員工食用，達成社區共榮。</p>
+
+        <a class="btn btn-chip" href="https://news.tvbs.com.tw/world/3241869" style="margin-top:1.2rem;display:inline-block">閱讀完整報導</a>
       </div>
     </div>
+  </div>
   </div>
 </div>
 

@@ -474,7 +474,7 @@ body{background:var(--surface-warm);color:var(--ink-mid);font-family:var(--body)
     <div class="lead-card">
       <div class="lead-img-wrap">
         <img src="台積電fab21.jpg" alt="台積電亞利桑那晶圓廠供應鏈" style="background:var(--silicon-mid);min-height:360px;display:block">
-        <div class="lead-img-cap">台積電亞利桑那廠區帶動逾百家供應鏈企業評估跟進。（圖／TVBS提供）</div>
+        <div class="lead-img-cap">台積電亞利桑那廠區帶動逾百家供應鏈企業評估跟進。（圖／黃貞怡攝）</div>
       </div>
       <div class="lead-body">
         <div>
@@ -580,30 +580,13 @@ body{background:var(--surface-warm);color:var(--ink-mid);font-family:var(--body)
   <div class="section-sub">Halo Vista規劃住宅、商業、教育、研發一體，北鳳凰城正長出一個「小台北」生活圈。</div>
 </div>
 <div style="max-width:1100px;margin:0 auto;padding:0 4rem 3rem">
-  <div style="position:relative;overflow:hidden;margin-bottom:1.5rem" id="map-carousel">
-  <div style="display:flex;transition:transform .4s ease" id="map-slides">
-    <div style="min-width:100%;position:relative">
-      <img src="台積電AZ廠區周圍兩大土地開發案.jpg" alt="台積電AZ廠區周圍兩大土地開發案" style="width:100%;display:block">
-      <div style="font-family:var(--display);font-size:12px;color:var(--ink-soft);padding:.5rem 0">台積電AZ廠區周圍兩大土地開發案：Halo Vista（2400英畝）與NorthPark（7400英畝）。（圖／AI生成示意）</div>
-    </div>
-    <div style="min-width:100%;position:relative">
-      <img src="vistancia 808商場 tsmc相對位置圖 AI生成.png" alt="台積電AZ廠區周邊社區與商場分布圖" style="width:100%;display:block">
-      <div style="font-family:var(--display);font-size:12px;color:var(--ink-soft);padding:.5rem 0">台積電AZ廠區周邊社區與商場分布圖，含Vistancia社區與808亞洲商場。（圖／AI生成示意）</div>
-    </div>
+  <!-- 圖1：兩大土地開發案 -->
+  <div style="margin-bottom:1.5rem">
+    <img src="台積電AZ廠區周圍兩大土地開發案.jpg" alt="台積電AZ廠區周圍兩大土地開發案" style="width:100%;display:block">
+    <div style="font-family:var(--display);font-size:12px;color:var(--ink-soft);padding:.5rem 0">台積電AZ廠區周圍兩大土地開發案：Halo Vista（2400英畝）與NorthPark（7400英畝）。（圖／TVBS）</div>
   </div>
-  <button onclick="moveSlide(-1)" style="position:absolute;left:.8rem;top:45%;transform:translateY(-50%);background:rgba(10,15,30,.6);border:1px solid rgba(255,255,255,.2);color:white;width:36px;height:36px;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center">‹</button>
-  <button onclick="moveSlide(1)" style="position:absolute;right:.8rem;top:45%;transform:translateY(-50%);background:rgba(10,15,30,.6);border:1px solid rgba(255,255,255,.2);color:white;width:36px;height:36px;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center">›</button>
-  <div style="display:flex;justify-content:center;gap:.5rem;padding:.6rem 0">
-    <div id="dot-0" style="width:6px;height:6px;border-radius:50%;background:var(--sand);cursor:pointer" onclick="goSlide(0)"></div>
-    <div id="dot-1" style="width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.25);cursor:pointer" onclick="goSlide(1)"></div>
-  </div>
-</div>
-<script>
-var cur=0,total=2;
-function updateDots(){for(var i=0;i<total;i++)document.getElementById('dot-'+i).style.background=i===cur?'var(--sand)':'rgba(255,255,255,.25)'}
-function moveSlide(dir){cur=(cur+dir+total)%total;document.getElementById('map-slides').style.transform='translateX(-'+cur*100+'%)';updateDots()}
-function goSlide(n){cur=n;document.getElementById('map-slides').style.transform='translateX(-'+cur*100+'%)';updateDots()}
-</script>
+
+  <!-- 左右欄：Halo Vista空拍 + 文字 -->
   <div class="wide-feat">
     <div class="wide-feat-img">
       <div style="width:100%;height:100%;min-height:340px;overflow:hidden;position:relative;background:linear-gradient(160deg,#E8B86D22 0%,var(--silicon-mid) 100%)">
@@ -611,34 +594,34 @@ function goSlide(n){cur=n;document.getElementById('map-slides').style.transform=
       </div>
     </div>
     <div class="wide-feat-body">
-  <div class="lead-kicker">北鳳凰城・造鎮・房市・生活圈</div>
-  <h2 style="font-family:var(--display);font-size:1.55rem;font-weight:700;color:var(--ink);letter-spacing:-.02em;line-height:1.25;margin-bottom:1.2rem">地產商耗資70億美元<br>打造環繞台積電的「城中城」</h2>
-
-  <p style="font-size:.9rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1rem">台積電廠區北方，一輛印著「Halo Vista」的巨型貨櫃車停在黃土空地上。2026年3月，開發商與亞利桑那州官員在此舉行開工典禮，宣告這項耗資<strong style="color:var(--ink)">70億美元</strong>、占地2,400英畝的造鎮計畫正式啟動。</p>
-
-  <p style="font-size:.9rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1rem">Halo Vista總經理詹森（Chris Janson）表示，Halo Vista未來將導入住宅、零售、飯店、辦公、供應商園區與教育訓練空間。他引用台灣經驗：「就像新竹科學園區圍繞台積電成長，我們想把竹科經驗和美國大型土地開發結合。」</p>
-
-  <div style="border-left:2px solid var(--sand);padding:.8rem 1rem;background:rgba(232,184,109,.06);margin:1.2rem 0">
-    <div style="font-size:.88rem;color:var(--ink-mid);line-height:1.8;font-style:italic">「半導體製造廠不能只靠自己在沙漠裡生存。他們最終需要有人在這裡生活、工作、購物、吃飯、住飯店。」</div>
-    <div style="font-family:var(--display);font-size:.78rem;color:var(--sand-dark);font-weight:600;margin-top:.4rem">Halo Vista總經理 Chris Janson</div>
+      <div class="lead-kicker">北鳳凰城・造鎮・房市・生活圈</div>
+      <h2 style="font-family:var(--display);font-size:1.55rem;font-weight:700;color:var(--ink);letter-spacing:-.02em;line-height:1.25;margin-bottom:1.2rem">地產商耗資70億美元<br>打造環繞台積電的「城中城」</h2>
+      <p style="font-size:.9rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1rem">台積電廠區北方，一輛印著「Halo Vista」的巨型貨櫃車停在黃土空地上。2026年3月，開發商與亞利桑那州官員在此舉行開工典禮，宣告這項耗資70億美元、占地2,400英畝的造鎮計畫正式啟動。</p>
+      <p style="font-size:.9rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1rem">Halo Vista總裁詹森（Chris Janson）表示，Halo Vista未來將導入住宅、零售、飯店、辦公、供應商園區與教育訓練空間。他引用台灣經驗：「就像新竹科學園區圍繞台積電成長，我們想把竹科經驗和美國大型土地開發結合。」</p>
+      <div style="border-left:2px solid var(--sand);padding:.8rem 1rem;background:rgba(232,184,109,.06);margin:1.2rem 0">
+        <div style="font-size:.88rem;color:var(--ink-mid);line-height:1.8;font-style:italic">「半導體製造廠不能只靠自己在沙漠裡生存。他們最終需要有人在這裡生活、工作、購物、吃飯、住飯店。」</div>
+        <div style="font-family:var(--display);font-size:.78rem;color:var(--sand-dark);font-weight:600;margin-top:.4rem">Halo Vista總裁 Chris Janson</div>
+      </div>
+      <p style="font-size:.9rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1rem">在房市端，台積電帶來的工程師家庭最重視學區與通勤距離。距台積電車程約16分鐘的Vistancia社區，因可銜接303號公路、直通艾克爾封測廠與台積電廠區，成為科技家庭新選擇，客群也從退休族逐漸轉為年輕科技家庭。</p>
+      <p style="font-size:.9rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1.5rem">生活機能方面，前Intel晶片工程師李宗富轉型為商場開發者，在鳳凰城北部打造面積約12萬平方英尺的「808亞洲商城」，導入日系精品超市、台灣餐飲、中文安親班與慈濟靜思書軒，試圖成為亞洲移民社群的一站式生活節點。</p>
+      <a class="read-more" href="https://news.tvbs.com.tw/world/3223732" target="_blank" rel="noopener">閱讀完整報導</a>
+      <div class="art-tags" style="margin-top:1rem">
+        <span class="tag">Halo Vista</span><span class="tag">北鳳凰城</span><span class="tag">Vistancia</span><span class="tag">808亞洲商城</span><span class="tag">沙漠造鎮</span>
+      </div>
+    </div>
   </div>
 
-  <p style="font-size:.9rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1rem">在房市端，台積電帶來的工程師家庭最重視學區與通勤距離。距台積電車程約16分鐘的Vistancia社區，因可銜接303號公路、直通艾克爾封測廠與台積電廠區，成為科技家庭新選擇，客群也從退休族逐漸轉為年輕科技家庭。</p>
-
-  <p style="font-size:.9rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1.5rem">生活機能方面，前Intel晶片工程師李宗富轉型為商場開發者，在鳳凰城北部打造面積約12萬平方英尺的<strong style="color:var(--ink)">808亞洲商城</strong>，導入日系精品超市、台灣餐飲、中文安親班與慈濟靜思書軒，試圖成為亞洲移民社群的一站式生活節點。</p>
-
-  <a class="read-more" href="https://news.tvbs.com.tw/world/3223732" target="_blank" rel="noopener">閱讀完整報導</a>
-  <div class="art-tags" style="margin-top:1rem">
-    <span class="tag">Halo Vista</span><span class="tag">北鳳凰城</span><span class="tag">Vistancia</span><span class="tag">808亞洲商城</span><span class="tag">沙漠造鎮</span>
-  </div>
-</div>
-    
-  </div>
-  <div style="margin-top:1.5rem;position:relative">
+  <!-- 圖3：Halo Vista分區規劃圖 -->
+  <div style="margin-top:1.5rem">
     <img src="Halo vista 分布圖 AI生成.png" alt="Halo-Vista-分布圖-分區規劃" style="width:100%;display:block;border:1px solid var(--rule)">
-    <div style="font-family:var(--display);font-size:12px;color:var(--ink-soft);padding:.6rem 0;line-height:1.5">Halo Vista細部分區規劃圖，涵蓋科技區、創新園區、住宅、零售與城鎮中心。（圖／AI生成示意）</div>
+    <div style="font-family:var(--display);font-size:12px;color:var(--ink-soft);padding:.5rem 0;line-height:1.5">Halo Vista細部分區規劃圖，涵蓋科技區、創新園區、住宅、零售與城鎮中心。（圖／AI生成示意）</div>
   </div>
-</div>
+
+  <!-- 圖2：社區與商場分布圖 -->
+  <div style="margin-top:1.5rem">
+    <img src="vistancia 808商場 tsmc相對位置圖 AI生成.png" alt="台積電AZ廠區周邊社區與商場分布圖" style="width:100%;display:block">
+    <div style="font-family:var(--display);font-size:12px;color:var(--ink-soft);padding:.5rem 0;line-height:1.5">台積電AZ廠區周邊社區與商場分布圖，含Vistancia社區與808亞洲商場車程示意。（圖／TVBS）</div>
+  </div>
 
 <!-- Topic 5 Water -->
 <div style="background:var(--surface);padding:3rem 0">

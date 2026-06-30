@@ -62,7 +62,8 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
 .hero-pill{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.85)}
 .hero-pill.hot{border-color:var(--sand);color:var(--sand)}
 .hero-scroll-hint{font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.35);display:flex;align-items:center;gap:.6rem}
-.hero-scroll-hint::after{content:'';display:block;width:40px;height:1px;background:rgba(255,255,255,.2)}
+.hero-scroll-hint::after{content:'↓';display:block;font-size:14px;color:rgba(255,255,255,.4);animation:scrollBounce 1.8s ease-in-out infinite}
+@keyframes scrollBounce{0%,100%{transform:translateY(0);opacity:.4}50%{transform:translateY(6px);opacity:.9}}
 .hero-stats-strip{position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);background:rgba(0,212,255,.06);border-top:1px solid rgba(0,212,255,.2);border-bottom:1px solid rgba(0,212,255,.2)}
 .hero-stat{padding:1.4rem 2rem;text-align:center;border-right:1px solid rgba(0,212,255,.15)}
 .hero-stat:last-child{border-right:none}

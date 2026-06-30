@@ -166,6 +166,8 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
 .wide-feat-body{padding:3rem 3.5rem;display:flex;flex-direction:column;justify-content:center}
 .wide-feat-img{min-height:340px;overflow:hidden;position:relative}
 .wide-feat-img img{width:100%;height:100%;object-fit:cover;display:block}
+.wide-feat-narrow{grid-template-columns:2fr 3fr}
+@media(max-width:768px){.wide-feat-narrow{grid-template-columns:1fr}}
 
 /* ── WATER MODULE ── */
 .water-module{background:var(--silicon-mid);padding:4rem;color:white;max-width:1100px;margin:0 auto;border:1px solid rgba(0,212,255,.15)}
@@ -220,8 +222,9 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
 @media(max-width:768px){
   .site-header{padding:0 1.2rem}
   .site-header nav{display:none}
-  .hero-content{padding:0 1.5rem 3.5rem}
-  .hero h1{font-size:2.6rem}
+  .hero{min-height:115vh}
+  .hero-content{padding:0 1.5rem 3.5rem;padding-top:5rem}
+  .hero h1{font-size:2.6rem;margin-bottom:1.2rem}
   .hero-stats-strip{grid-template-columns:1fr 1fr}
   .hero-stat{padding:1rem}
   .timeline-strip{padding:2rem 1.5rem}
@@ -503,7 +506,7 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
 <!-- Topic 1b 銳澤聖暉 + Topic 9 -->
 <div style="max-width:1100px;margin:0 auto;padding:0 4rem 4rem">
   <div>
-    <div class="wide-feat" style="grid-template-columns:2fr 3fr">
+    <div class="wide-feat wide-feat-narrow">
   <div class="wide-feat-img">
     <div style="width:100%;height:100%;min-height:320px;overflow:hidden;position:relative;background:linear-gradient(135deg,var(--silicon) 0%,var(--silicon-mid) 100%)">
       <img src="台積電fab21.jpg" alt="銳澤聖暉-台灣供應鏈-亞利桑那" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block">

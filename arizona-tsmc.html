@@ -13,9 +13,9 @@
   --sand:#E8B86D;
   --sand-dark:#C4913A;
   --sand-pale:#F7EDD8;
-  --chip:#00D4FF;
-  --chip-dark:#0099BB;
-  --chip-dim:rgba(0,212,255,.12);
+  --chip:#3A8FBF;
+  --chip-dark:#2A6F9A;
+  --chip-dim:rgba(58,143,191,.12);
   --silicon:#1A2744;
   --silicon-mid:#2E3F6A;
   --silicon-light:#4A5F8E;
@@ -185,8 +185,8 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
 .person-card{background:var(--surface-warm);border:1px solid var(--rule);padding:1.8rem}
 .person-role{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--chip-dark);margin-bottom:.4rem}
 .person-name{font-family:var(--display);font-size:1.05rem;font-weight:700;color:var(--ink);margin-bottom:.4rem}
-.person-org{font-family:var(--display);font-size:.85rem;color:#0099BB;font-weight:600;margin-bottom:.8rem}
-.person-quote{font-size:.88rem;color:var(--ink-mid);line-height:1.8;border-left:2px solid #0099BB;padding-left:.9rem}
+.person-org{font-family:var(--display);font-size:.85rem;color:#2A6F9A;font-weight:600;margin-bottom:.8rem}
+.person-quote{font-size:.88rem;color:var(--ink-mid);line-height:1.8;border-left:2px solid #2A6F9A;padding-left:.9rem}
 
 /* ── MAP MODULE placeholder ── */
 .map-ph{background:var(--silicon);aspect-ratio:16/7;position:relative;overflow:hidden;border:1px solid rgba(0,212,255,.15)}
@@ -415,11 +415,11 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
       <animate attributeName="r" values="8;18;8" dur="2.8s" repeatCount="indefinite"/>
       <animate attributeName="opacity" values="1;0;1" dur="2.8s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="978" cy="90" r="5" fill="#00D4FF" filter="url(#glow-chip)"/>
+    <circle cx="978" cy="90" r="5" fill="#3A8FBF" filter="url(#glow-chip)"/>
 
     <!-- Taipei label — upper-right of dot -->
     <rect x="982" y="72" width="92" height="34" rx="2" fill="rgba(10,15,30,.78)"/>
-    <text x="988" y="85" font-family="'Space Mono',monospace" font-size="9" font-weight="700" fill="#00D4FF" letter-spacing="0.3">台北 TPE</text>
+    <text x="988" y="85" font-family="'Space Mono',monospace" font-size="9" font-weight="700" fill="#3A8FBF" letter-spacing="0.3">台北 TPE</text>
     <text x="988" y="99" font-family="'Noto Sans TC',sans-serif" font-size="9" fill="rgba(255,255,255,.85)">直飛12.5小時</text>
 
     <!-- Hsinchu dot — west coast -->
@@ -435,7 +435,7 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
       fill="none" stroke="rgba(232,184,109,.22)" stroke-width="1" stroke-dasharray="4,4"/>
 
     <!-- Animated dot — flight path -->
-    <circle r="3" fill="#00D4FF" opacity="0.9">
+    <circle r="3" fill="#3A8FBF" opacity="0.9">
       <animateMotion dur="4s" repeatCount="indefinite" path="M 155,210 C 380,20 680,10 978,90"/>
       <animate attributeName="opacity" values="0;1;1;0" dur="4s" repeatCount="indefinite"/>
     </circle>
@@ -718,9 +718,9 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
           <line x1="340" y1="376" x2="340" y2="416" stroke="rgba(0,212,255,.4)" stroke-width="1"/>
           <polyline points="107,416 340,416 573,416" stroke="rgba(0,212,255,.35)" stroke-width="1" fill="none"/>
           <line x1="340" y1="416" x2="340" y2="432" stroke="rgba(0,212,255,.5)" stroke-width="1.5" marker-end="url(#wa5)"/>
-          <circle class="wd1" cx="107" cy="400" r="2" fill="#00D4FF" opacity=".7"/>
-          <circle class="wd2" cx="340" cy="400" r="2" fill="#00D4FF" opacity=".7"/>
-          <circle class="wd3" cx="573" cy="360" r="2" fill="#00D4FF" opacity=".7"/>
+          <circle class="wd1" cx="107" cy="400" r="2" fill="#3A8FBF" opacity=".7"/>
+          <circle class="wd2" cx="340" cy="400" r="2" fill="#3A8FBF" opacity=".7"/>
+          <circle class="wd3" cx="573" cy="360" r="2" fill="#3A8FBF" opacity=".7"/>
           <text x="24" y="429" font-family="'Space Mono',monospace" font-size="8" fill="rgba(255,255,255,.3)">台積電公司廠區外</text>
           <rect x="566" y="436" width="94" height="34" rx="6" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.2)" stroke-width="0.5"/>
           <text x="613" y="458" text-anchor="middle" font-family="'Noto Sans TC',sans-serif" font-size="11" fill="rgba(255,255,255,.85)">自來水</text>

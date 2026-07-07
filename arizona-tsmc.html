@@ -37,11 +37,11 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
 
 /* ── HEADER ── */
 .site-header{background:var(--ink);padding:0 3rem;display:flex;align-items:center;justify-content:space-between;height:52px;position:sticky;top:0;z-index:200}
-.header-logo{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:white;font-family:var(--display);font-size:14px;font-weight:600;letter-spacing:.06em}
+.header-logo{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:white;font-family:var(--display);font-size:17px;font-weight:600;letter-spacing:.06em}
 .header-logo img{height:18px;width:auto}
-.header-badge{background:var(--sand);color:var(--ink);font-family:var(--display);font-size:10px;font-weight:700;padding:3px 9px;letter-spacing:.12em;text-transform:uppercase}
+.header-badge{background:var(--sand);color:var(--ink);font-family:var(--display);font-size:16px;font-weight:700;padding:3px 9px;letter-spacing:.12em;text-transform:uppercase}
 .site-header nav{display:flex;gap:1.8rem}
-.site-header nav a{color:rgba(255,255,255,.55);text-decoration:none;font-family:var(--display);font-size:12px;font-weight:500;letter-spacing:.04em;transition:color .2s}
+.site-header nav a{color:rgba(255,255,255,.55);text-decoration:none;font-family:var(--display);font-size:15px;font-weight:500;letter-spacing:.04em;transition:color .2s}
 .site-header nav a:hover{color:var(--sand)}
 
 /* ── HERO ── */
@@ -52,27 +52,27 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
 @keyframes glow{from{transform:scale(.9) translate(0,0)}to{transform:scale(1.1) translate(-30px,40px)}}
 .hero-chip-line{position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--chip),transparent)}
 .hero-content{position:relative;z-index:2;max-width:1100px;padding:0 4rem 5rem;width:100%}
-.hero-eyebrow{font-family:var(--mono);font-size:11px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--chip);margin-bottom:1.8rem;display:flex;align-items:center;gap:.8rem}
+.hero-eyebrow{font-family:var(--mono);font-size:17px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--chip);margin-bottom:1.8rem;display:flex;align-items:center;gap:.8rem}
 .hero-eyebrow::before{content:'';display:inline-block;width:32px;height:1px;background:var(--chip)}
 .hero h1{font-family:var(--display);font-size:clamp(3.2rem,7vw,6rem);font-weight:700;color:white;line-height:1.0;letter-spacing:-.02em;margin-bottom:.4rem}
 .hero h1 .accent{color:var(--sand);display:block}
 .hero h1 .sub{font-size:clamp(1.4rem,3vw,2.4rem);font-weight:300;color:rgba(255,255,255,.7);letter-spacing:.01em;display:block;margin-top:.5rem}
 .hero-lead{font-family:var(--body);font-size:1.05rem;color:rgba(255,255,255,.7);line-height:2;max-width:640px;margin:2rem 0 2.5rem;padding-left:1.2rem;border-left:2px solid var(--sand)}
 .hero-pills{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:2.5rem}
-.hero-pill{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.85)}
+.hero-pill{font-family:var(--mono);font-size:15px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.85)}
 .hero-pill.hot{border-color:var(--sand);color:var(--sand)}
-.hero-scroll-hint{font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.35);display:flex;align-items:center;gap:.6rem}
-.hero-scroll-hint::after{content:'↓';display:block;font-size:14px;color:rgba(255,255,255,.4);animation:scrollBounce 1.8s ease-in-out infinite}
+.hero-scroll-hint{font-family:var(--mono);font-size:16px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.35);display:flex;align-items:center;gap:.6rem}
+.hero-scroll-hint::after{content:'↓';display:block;font-size:17px;color:rgba(255,255,255,.4);animation:scrollBounce 1.8s ease-in-out infinite}
 @keyframes scrollBounce{0%,100%{transform:translateY(0);opacity:.4}50%{transform:translateY(6px);opacity:.9}}
 .hero-stats-strip{position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);background:rgba(0,212,255,.06);border-top:1px solid rgba(0,212,255,.2);border-bottom:1px solid rgba(0,212,255,.2)}
 .hero-stat{padding:1.4rem 2rem;text-align:center;border-right:1px solid rgba(0,212,255,.15)}
 .hero-stat:last-child{border-right:none}
 .hero-stat-num{font-family:var(--mono);font-size:1.8rem;font-weight:700;color:var(--sand);line-height:1;margin-bottom:.3rem}
-.hero-stat-label{font-family:var(--display);font-size:12px;color:rgba(255,255,255,.85);letter-spacing:.06em}
+.hero-stat-label{font-family:var(--display);font-size:15px;color:rgba(255,255,255,.85);letter-spacing:.06em}
 
 /* ── TIMELINE STRIP ── */
 .timeline-strip{background:var(--silicon);overflow-x:auto;padding:2.5rem 3rem}
-.tl-label{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--chip);margin-bottom:2rem;display:flex;align-items:center;gap:.6rem}
+.tl-label{font-family:var(--mono);font-size:16px;letter-spacing:.18em;text-transform:uppercase;color:var(--chip);margin-bottom:2rem;display:flex;align-items:center;gap:.6rem}
 .tl-label::before{content:'//';opacity:.5}
 .timeline{display:flex;gap:0;position:relative;min-width:860px}
 .timeline::before{content:'';position:absolute;top:20px;left:0;right:0;height:1px;background:rgba(255,255,255,.12)}
@@ -81,21 +81,21 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
 .tl-item.hi .tl-dot{background:var(--sand);border-color:var(--sand);width:15px;height:15px;top:13px;box-shadow:0 0 0 4px rgba(232,184,109,.2)}
 .tl-year{font-family:var(--mono);font-size:1rem;color:rgba(255,255,255,.85);margin-bottom:.2rem;font-weight:700}
 .tl-item.hi .tl-year{color:var(--sand)}
-.tl-desc{font-family:var(--body);font-size:13px;color:rgba(255,255,255,.85);line-height:1.55}
+.tl-desc{font-family:var(--body);font-size:16px;color:rgba(255,255,255,.85);line-height:1.55}
 .tl-item.hi .tl-desc{color:rgba(255,255,255,.85)}
 
 /* ── SECTION COMMON ── */
 .section-wrap{max-width:1100px;margin:0 auto;padding:5rem 4rem}
-.section-label{font-family:var(--mono);font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--oasis);margin-bottom:.8rem;display:flex;align-items:center;gap:.5rem}
+.section-label{font-family:var(--mono);font-size:16px;letter-spacing:.2em;text-transform:uppercase;color:var(--oasis);margin-bottom:.8rem;display:flex;align-items:center;gap:.5rem}
 .section-label::before{content:'//';color:rgba(45,184,125,.4)}
 .section-title{font-family:var(--display);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:700;color:var(--ink);line-height:1.15;letter-spacing:-.02em;margin-bottom:.8rem}
-.section-sub{font-size:.9rem;color:var(--ink-soft);font-family:var(--display);line-height:1.65;margin-bottom:2rem;max-width:100%}
+.section-sub{font-size:1.1rem;color:var(--ink-soft);font-family:var(--display);line-height:1.65;margin-bottom:2rem;max-width:100%}
 .divider{border:none;border-top:1px solid var(--rule)}
 
 /* ── CATEGORY NAV ── */
 .cat-nav{background:var(--surface);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);overflow-x:auto}
 .cat-nav-inner{max-width:1100px;margin:0 auto;padding:0 4rem;display:flex;gap:0}
-.cat-btn{font-family:var(--display);font-size:13px;font-weight:600;padding:1.1rem 1.5rem;color:var(--ink-soft);text-decoration:none;letter-spacing:.04em;border-bottom:2px solid transparent;white-space:nowrap;transition:color .2s,border-color .2s}
+.cat-btn{font-family:var(--display);font-size:16px;font-weight:600;padding:1.1rem 1.5rem;color:var(--ink-soft);text-decoration:none;letter-spacing:.04em;border-bottom:2px solid transparent;white-space:nowrap;transition:color .2s,border-color .2s}
 .cat-btn:hover,.cat-btn.active{color:var(--ink);border-bottom-color:var(--sand)}
 
 /* ── ARTICLE LEAD CARD ── */
@@ -103,17 +103,17 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
 .lead-img-wrap{position:relative;overflow:hidden;min-height:360px}
 .lead-img-wrap img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s}
 .lead-img-wrap:hover img{transform:scale(1.04)}
-.lead-img-cap{position:absolute;bottom:0;left:0;right:0;padding:.65rem 1rem;background:rgba(10,15,30,.7);font-family:var(--display);font-size:12px;color:rgba(255,255,255,.65);font-style:italic}
+.lead-img-cap{position:absolute;bottom:0;left:0;right:0;padding:.65rem 1rem;background:rgba(10,15,30,.7);font-family:var(--display);font-size:15px;color:rgba(255,255,255,.65);font-style:italic}
 .lead-body{padding:2.5rem 3rem;display:flex;flex-direction:column;justify-content:space-between}
-.lead-kicker{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--sand-dark);margin-bottom:.8rem;display:flex;align-items:center;gap:.5rem}
+.lead-kicker{font-family:var(--mono);font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:var(--sand-dark);margin-bottom:.8rem;display:flex;align-items:center;gap:.5rem}
 .lead-kicker::before{content:'';display:block;width:16px;height:2px;background:var(--sand)}
 .lead-body h2{font-family:var(--display);font-size:1.55rem;font-weight:700;line-height:1.25;color:var(--ink);margin-bottom:1.2rem;letter-spacing:-.02em}
-.lead-body .teaser{font-size:.92rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1.5rem}
+.lead-body .teaser{font-size:1.12rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1.5rem}
 .lead-body .teaser strong{color:var(--ink);font-weight:600}
-.read-more{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--display);font-size:12px;font-weight:700;color:var(--sand-dark);text-decoration:none;letter-spacing:.06em;border-bottom:1.5px solid var(--sand);padding-bottom:2px;transition:gap .2s}
+.read-more{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--display);font-size:15px;font-weight:700;color:var(--sand-dark);text-decoration:none;letter-spacing:.06em;border-bottom:1.5px solid var(--sand);padding-bottom:2px;transition:gap .2s}
 .read-more:hover{gap:.85rem}
 .read-more::after{content:'→'}
-.card-meta{font-family:var(--display);font-size:11px;color:var(--ink-soft);margin-top:1rem;padding-top:1rem;border-top:1px solid var(--rule-light)}
+.card-meta{font-family:var(--display);font-size:17px;color:var(--ink-soft);margin-top:1rem;padding-top:1rem;border-top:1px solid var(--rule-light)}
 
 /* ── 3-COL GRID ── */
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
@@ -122,11 +122,11 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
 .art-card:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(10,15,30,.08)}
 .art-card-img{width:100%;height:200px;object-fit:cover;display:block}
 .art-card-body{padding:1.4rem 1.6rem 1.8rem}
-.art-kicker{font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--sand-dark);margin-bottom:.5rem}
+.art-kicker{font-family:var(--mono);font-size:16px;letter-spacing:.15em;text-transform:uppercase;color:var(--sand-dark);margin-bottom:.5rem}
 .art-card h3{font-family:var(--display);font-size:1.1rem;font-weight:700;line-height:1.3;color:var(--ink);margin-bottom:.7rem;letter-spacing:-.01em}
-.art-card p{font-size:.875rem;color:var(--ink-mid);line-height:1.8;margin-bottom:1rem}
+.art-card p{font-size:1.075rem;color:var(--ink-mid);line-height:1.8;margin-bottom:1rem}
 .art-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.8rem}
-.tag{font-family:var(--display);font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--silicon-light);background:var(--surface);padding:4px 10px;border:1px solid var(--rule)}
+.tag{font-family:var(--display);font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--silicon-light);background:var(--surface);padding:4px 10px;border:1px solid var(--rule)}
 
 /* ── DARK DATA BAND ── */
 .data-band{background:var(--silicon);padding:4.5rem 0;color:white}
@@ -137,20 +137,20 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
 .stat-block{padding:2rem 1.8rem;border-right:1px solid rgba(255,255,255,.08)}
 .stat-block:last-child{border-right:none}
 .stat-num{font-family:var(--mono);font-size:2.8rem;color:var(--sand);line-height:1;margin-bottom:.4rem;font-weight:700}
-.stat-unit{font-size:.9rem;color:var(--chip);font-weight:400}
-.stat-desc{font-family:var(--display);font-size:13px;color:rgba(255,255,255,.85);line-height:1.55;margin-top:.4rem}
+.stat-unit{font-size:1.1rem;color:var(--chip);font-weight:400}
+.stat-desc{font-family:var(--display);font-size:16px;color:rgba(255,255,255,.85);line-height:1.55;margin-top:.4rem}
 
 /* ── OASIS BAND (green highlight) ── */
 .oasis-band{background:var(--oasis);padding:3rem 0}
 .oasis-band-inner{max-width:1100px;margin:0 auto;padding:0 4rem;display:flex;align-items:center;gap:3rem}
 .oasis-icon{font-size:3rem;flex-shrink:0;background:rgba(255,255,255,.2);width:72px;height:72px;display:flex;align-items:center;justify-content:center}
 .oasis-quote{font-family:var(--display);font-size:1.45rem;font-weight:700;color:white;line-height:1.35;letter-spacing:-.02em;flex:1}
-.oasis-source{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-top:.5rem}
+.oasis-source{font-family:var(--mono);font-size:17px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-top:.5rem}
 
 /* ── CHAPTER LABEL ── */
 .chapter-bar{background:var(--sand-pale);padding:1.2rem 4rem;border-top:3px solid var(--sand);border-bottom:1px solid rgba(232,184,109,.3)}
 .chapter-bar-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:1.2rem}
-.chapter-num{font-family:var(--mono);font-size:.85rem;font-weight:700;color:var(--sand-dark);letter-spacing:.1em}
+.chapter-num{font-family:var(--mono);font-size:.1.05rem;font-weight:700;color:var(--sand-dark);letter-spacing:.1em}
 .chapter-name{font-family:var(--display);font-size:1rem;font-weight:600;color:var(--ink);letter-spacing:-.01em}
 .chapter-pipe{width:1px;height:20px;background:var(--sand-dark);opacity:.4}
 
@@ -158,7 +158,7 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
 .chip-strip{background:var(--ink);padding:1.2rem 4rem;display:flex;align-items:center;gap:3rem;overflow-x:auto;border-bottom:1px solid rgba(0,212,255,.15)}
 .chip-item{display:flex;align-items:center;gap:.7rem;flex-shrink:0}
 .chip-dot{width:6px;height:6px;border-radius:50%;background:var(--chip)}
-.chip-text{font-family:var(--mono);font-size:11px;color:rgba(255,255,255,.85);letter-spacing:.08em;white-space:nowrap}
+.chip-text{font-family:var(--mono);font-size:17px;color:rgba(255,255,255,.85);letter-spacing:.08em;white-space:nowrap}
 .chip-text strong{color:var(--sand);font-weight:700}
 
 /* ── WIDE FEATURE (half+half alt) ── */
@@ -175,7 +175,7 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
 .water-flow{display:flex;align-items:center;gap:0;margin:2rem 0}
 .water-step{flex:1;text-align:center;padding:1.5rem 1rem;background:rgba(255,255,255,.05);position:relative}
 .water-step-num{font-family:var(--mono);font-size:.75rem;font-weight:700;color:var(--chip);letter-spacing:.1em;margin-bottom:.4rem}
-.water-step-name{font-family:var(--display);font-size:.85rem;font-weight:600;color:white;line-height:1.3}
+.water-step-name{font-family:var(--display);font-size:.1.05rem;font-weight:600;color:white;line-height:1.3}
 .water-arrow{font-size:1.2rem;color:var(--chip);opacity:.6;flex-shrink:0;padding:0 .3rem}
 .water-big{font-family:var(--mono);font-size:5rem;font-weight:700;color:var(--chip);line-height:1;text-align:center;margin:1.5rem 0}
 .water-big span{font-size:2rem;vertical-align:super;color:var(--sand)}
@@ -183,10 +183,10 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
 /* ── PEOPLE GRID ── */
 .people-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
 .person-card{background:var(--surface-warm);border:1px solid var(--rule);padding:1.8rem}
-.person-role{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--chip-dark);margin-bottom:.4rem}
+.person-role{font-family:var(--mono);font-size:16px;letter-spacing:.12em;text-transform:uppercase;color:var(--chip-dark);margin-bottom:.4rem}
 .person-name{font-family:var(--display);font-size:1.05rem;font-weight:700;color:var(--ink);margin-bottom:.4rem}
-.person-org{font-family:var(--display);font-size:.85rem;color:#2A6F9A;font-weight:600;margin-bottom:.8rem}
-.person-quote{font-size:.88rem;color:var(--ink-mid);line-height:1.8;border-left:2px solid #2A6F9A;padding-left:.9rem}
+.person-org{font-family:var(--display);font-size:.1.05rem;color:#2A6F9A;font-weight:600;margin-bottom:.8rem}
+.person-quote{font-size:1.08rem;color:var(--ink-mid);line-height:1.8;border-left:2px solid #2A6F9A;padding-left:.9rem}
 
 /* ── MAP MODULE placeholder ── */
 .map-ph{background:var(--silicon);aspect-ratio:16/7;position:relative;overflow:hidden;border:1px solid rgba(0,212,255,.15)}
@@ -197,21 +197,21 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
 @keyframes ring{0%{transform:scale(.5);opacity:1}100%{transform:scale(2.2);opacity:0}}
 .map-dot-core{position:absolute;top:50%;left:50%;width:8px;height:8px;border-radius:50%;background:var(--chip);transform:translate(-50%,-50%)}
 .map-dot-core.gold{background:var(--sand)}
-.map-label{position:absolute;font-family:var(--mono);font-size:11px;font-weight:700;color:white;letter-spacing:.08em;white-space:nowrap;background:rgba(10,15,30,.7);padding:3px 8px}
+.map-label{position:absolute;font-family:var(--mono);font-size:17px;font-weight:700;color:white;letter-spacing:.08em;white-space:nowrap;background:rgba(10,15,30,.7);padding:3px 8px}
 .map-line{position:absolute;background:none}
-.map-overlay-text{position:absolute;bottom:1.5rem;left:2rem;font-family:var(--mono);font-size:10px;color:rgba(255,255,255,.35);letter-spacing:.12em;text-transform:uppercase}
+.map-overlay-text{position:absolute;bottom:1.5rem;left:2rem;font-family:var(--mono);font-size:16px;color:rgba(255,255,255,.35);letter-spacing:.12em;text-transform:uppercase}
 
 /* ── FOOTER ── */
 .site-footer{background:var(--ink);color:rgba(255,255,255,.85);padding:3.5rem 4rem;text-align:center;width:100%}
 .footer-logo{display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-size:16px;font-weight:600;color:white;letter-spacing:.06em;margin-bottom:.8rem}
 .footer-logo img{height:20px;width:auto}
-.footer-topic{font-family:var(--mono);font-size:11px;color:rgba(255,255,255,.35);letter-spacing:.14em;text-transform:uppercase;margin-bottom:1.5rem}
+.footer-topic{font-family:var(--mono);font-size:17px;color:rgba(255,255,255,.35);letter-spacing:.14em;text-transform:uppercase;margin-bottom:1.5rem}
 .footer-divider{border:none;border-top:1px solid rgba(255,255,255,.06);margin:1.5rem auto;max-width:160px}
-.footer-meta{font-family:var(--display);font-size:12px;line-height:2.2;color:rgba(255,255,255,.35)}
+.footer-meta{font-family:var(--display);font-size:15px;line-height:2.2;color:rgba(255,255,255,.35)}
 .footer-chip-line{width:120px;height:2px;background:linear-gradient(90deg,transparent,var(--chip),transparent);margin:1.5rem auto 0}
 
 /* ── BUTTONS ── */
-.btn{display:inline-block;font-family:var(--display);font-size:12px;font-weight:700;letter-spacing:.08em;text-decoration:none;padding:10px 22px;cursor:pointer;transition:all .2s}
+.btn{display:inline-block;font-family:var(--display);font-size:15px;font-weight:700;letter-spacing:.08em;text-decoration:none;padding:10px 22px;cursor:pointer;transition:all .2s}
 .btn-sand{background:var(--sand);color:var(--ink);border:2px solid var(--sand)}
 .btn-sand:hover{background:var(--sand-dark);border-color:var(--sand-dark)}
 .btn-outline{background:transparent;color:var(--sand);border:1.5px solid var(--sand)}
@@ -297,19 +297,19 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
 
   <div class="hero-stats-strip">
     <div class="hero-stat">
-      <div class="hero-stat-num">$1,000<span style="font-size:.9rem;color:var(--chip)">億</span></div>
+      <div class="hero-stat-num">$1,000<span style="font-size:1.1rem;color:var(--chip)">億</span></div>
       <div class="hero-stat-label">2025年台積電再增投資</div>
     </div>
     <div class="hero-stat">
-      <div class="hero-stat-num">3<span style="font-size:.9rem;color:var(--chip)">座</span></div>
+      <div class="hero-stat-num">3<span style="font-size:1.1rem;color:var(--chip)">座</span></div>
       <div class="hero-stat-label">亞利桑那晶圓廠規劃</div>
     </div>
     <div class="hero-stat">
-      <div class="hero-stat-num">8<span style="font-size:.9rem;color:var(--chip)">成↑</span></div>
+      <div class="hero-stat-num">8<span style="font-size:1.1rem;color:var(--chip)">成↑</span></div>
       <div class="hero-stat-label">華航鳳凰城航線載客率</div>
     </div>
     <div class="hero-stat">
-      <div class="hero-stat-num">471<span style="font-size:.9rem;color:var(--chip)">%</span></div>
+      <div class="hero-stat-num">471<span style="font-size:1.1rem;color:var(--chip)">%</span></div>
       <div class="hero-stat-label">2025年台灣訪客年增率</div>
     </div>
   </div>
@@ -478,7 +478,7 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
     <div>
   <div style="width:100%;overflow:hidden;position:relative;margin-bottom:1.5rem">
     <img src="TSMC AZ1.jpg" alt="台積電鳳凰城廠區" style="width:100%;display:block;max-height:460px;object-fit:cover">
-    <div style="font-family:var(--display);font-size:12px;color:var(--ink-soft);padding:.5rem 0">台灣產官學界赴亞利桑那考察，評估跟進投資機會。（圖／黃貞怡攝）</div>
+    <div style="font-family:var(--display);font-size:15px;color:var(--ink-soft);padding:.5rem 0">台灣產官學界赴亞利桑那考察，評估跟進投資機會。（圖／黃貞怡攝）</div>
   </div>
   <div class="lead-body" style="padding:0">
         <div>
@@ -487,7 +487,7 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
           <p class="teaser">今年由台灣產官學界組成的SelectUSA代表團共81家企業，其中只有一半是半導體科技業者，其餘涵蓋服務業、諮詢、餐飲等多元領域。外貿協會董事長黃志芳感嘆：「全美國哪個城市，有台灣把這麼大的商業能量灌注在一個地方！」</p>
 
           <div style="border-left:2px solid var(--sand);padding:.7rem 1rem;background:rgba(212,146,42,.06);margin:1rem 0">
-            <div style="font-size:.88rem;color:var(--ink-mid);line-height:1.8;font-style:italic">「鳳凰城希望成為台灣企業進軍美國的第一首選地點！」</div>
+            <div style="font-size:1.08rem;color:var(--ink-mid);line-height:1.8;font-style:italic">「鳳凰城希望成為台灣企業進軍美國的第一首選地點！」</div>
             <div style="font-family:var(--display);font-size:.78rem;color:var(--sand-dark);font-weight:600;margin-top:.3rem">鳳凰城市長 Kate Gallego</div>
           </div>
 
@@ -519,7 +519,7 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
   <div class="wide-feat-body">
     <div class="lead-kicker">半導體供應鏈</div>
     <h2 style="font-family:var(--display);font-size:1.45rem;font-weight:700;color:var(--ink);letter-spacing:-.02em;line-height:1.25;margin-bottom:1rem">從新竹到鳳凰城！銳澤聖暉赴美打團體戰<br>冰淇淋廠變身模擬Fab訓練基地</h2>
-    <p style="font-size:.9rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1.5rem">銳澤鳳凰城廠辦前身是冰淇淋工廠，即將改建為模擬無塵室訓練基地。台美職場文化差異、雙語人才稀缺，是落地最大課題。</p>
+    <p style="font-size:1.1rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1.5rem">銳澤鳳凰城廠辦前身是冰淇淋工廠，即將改建為模擬無塵室訓練基地。台美職場文化差異、雙語人才稀缺，是落地最大課題。</p>
     <a class="read-more" target="_blank" rel="noopener" href="https://news.tvbs.com.tw/world/3233939" target="_blank" rel="noopener">閱讀完整報導</a>
     <div class="art-tags" style="margin-top:1rem">
       <span class="tag">銳澤</span><span class="tag">聖暉</span><span class="tag">模擬Fab</span><span class="tag">台美職場文化</span>
@@ -549,21 +549,21 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
   <!-- 圖1：兩大土地開發案 -->
   <div style="margin-bottom:1.5rem">
     <img src="台積電AZ廠區周圍兩大土地開發案.jpg" alt="台積電AZ廠區周圍兩大土地開發案" style="width:100%;display:block">
-    <div style="font-family:var(--display);font-size:12px;color:var(--ink-soft);padding:.5rem 0">台積電AZ廠區周圍兩大土地開發案：Halo Vista（2400英畝）與NorthPark（7400英畝）。（圖／TVBS）</div>
+    <div style="font-family:var(--display);font-size:15px;color:var(--ink-soft);padding:.5rem 0">台積電AZ廠區周圍兩大土地開發案：Halo Vista（2400英畝）與NorthPark（7400英畝）。（圖／TVBS）</div>
   </div>
 
   <div>
     <div style="padding:0">
       <div class="lead-kicker">北鳳凰城・造鎮・房市・生活圈</div>
       <h2 style="font-family:var(--display);font-size:1.55rem;font-weight:700;color:var(--ink);letter-spacing:-.02em;line-height:1.25;margin-bottom:1.2rem">地產商耗資70億美元<br>打造環繞台積電的「城中城」</h2>
-      <p style="font-size:.9rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1rem">台積電廠區北方，一輛印著「Halo Vista」的巨型貨櫃車停在黃土空地上。2026年3月，開發商與亞利桑那州官員在此舉行開工典禮，宣告這項耗資70億美元、占地2,400英畝的造鎮計畫正式啟動。</p>
+      <p style="font-size:1.1rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1rem">台積電廠區北方，一輛印著「Halo Vista」的巨型貨櫃車停在黃土空地上。2026年3月，開發商與亞利桑那州官員在此舉行開工典禮，宣告這項耗資70億美元、占地2,400英畝的造鎮計畫正式啟動。</p>
       <div style="margin:1rem 0;overflow:hidden">
         <img src="0428halovista空拍1.jpg" alt="Halo-Vista-北鳳凰城-造鎮開發空拍" style="width:100%;display:block;max-height:360px;object-fit:cover">
-<div style="font-family:var(--display);font-size:12px;color:var(--ink-soft);padding:.5rem 0">台積電北邊開發案Halo Vista腹地廣闊，環繞台積電園區。（圖／粘祐誠攝）</div>
+<div style="font-family:var(--display);font-size:15px;color:var(--ink-soft);padding:.5rem 0">台積電北邊開發案Halo Vista腹地廣闊，環繞台積電園區。（圖／粘祐誠攝）</div>
       </div>
-      <p style="font-size:.9rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1rem">Halo Vista總裁詹森（Chris Janson）表示，Halo Vista未來將導入住宅、零售、飯店、辦公、供應商園區與教育訓練空間。他引用台灣經驗：「就像新竹科學園區圍繞台積電成長，我們想把竹科經驗和美國大型土地開發結合。」</p>
+      <p style="font-size:1.1rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1rem">Halo Vista總裁詹森（Chris Janson）表示，Halo Vista未來將導入住宅、零售、飯店、辦公、供應商園區與教育訓練空間。他引用台灣經驗：「就像新竹科學園區圍繞台積電成長，我們想把竹科經驗和美國大型土地開發結合。」</p>
       <div style="border-left:2px solid var(--sand);padding:.8rem 1rem;background:rgba(232,184,109,.06);margin:1.2rem 0">
-        <div style="font-size:.88rem;color:var(--ink-mid);line-height:1.8;font-style:italic">「半導體製造廠不能只靠自己在沙漠裡生存。他們最終需要有人在這裡生活、工作、購物、吃飯、住飯店。」</div>
+        <div style="font-size:1.08rem;color:var(--ink-mid);line-height:1.8;font-style:italic">「半導體製造廠不能只靠自己在沙漠裡生存。他們最終需要有人在這裡生活、工作、購物、吃飯、住飯店。」</div>
         <div style="font-family:var(--display);font-size:.78rem;color:var(--sand-dark);font-weight:600;margin-top:.4rem">Halo Vista總裁 Chris Janson</div>
       </div>
       <a class="read-more" target="_blank" rel="noopener" href="https://news.tvbs.com.tw/world/3223732" target="_blank" rel="noopener">閱讀完整報導</a>
@@ -576,13 +576,13 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
   <!-- 圖3：Halo Vista分區規劃圖 -->
   <div style="margin-top:1.5rem">
     <img src="Halo vista 分布圖 AI生成.png" alt="Halo-Vista-分布圖-分區規劃" style="width:100%;display:block;border:1px solid var(--rule)">
-    <div style="font-family:var(--display);font-size:12px;color:var(--ink-soft);padding:.5rem 0;line-height:1.5">Halo Vista細部分區規劃圖，涵蓋科技區、創新園區、住宅、零售與城鎮中心。（圖／AI生成示意）</div>
+    <div style="font-family:var(--display);font-size:15px;color:var(--ink-soft);padding:.5rem 0;line-height:1.5">Halo Vista細部分區規劃圖，涵蓋科技區、創新園區、住宅、零售與城鎮中心。（圖／AI生成示意）</div>
   </div>
 
   <!-- 圖2：社區與商場分布圖 -->
   <div style="margin-top:1.5rem">
     <img src="vistancia 808商場 tsmc相對位置圖 AI生成.png" alt="台積電AZ廠區周邊社區與商場分布圖" style="width:100%;display:block">
-    <div style="font-family:var(--display);font-size:12px;color:var(--ink-soft);padding:.5rem 0;line-height:1.5">台積電AZ廠區周邊社區與商場分布圖，含Vistancia社區與808亞洲商場車程示意。（圖／AI生成示意）</div>
+    <div style="font-family:var(--display);font-size:15px;color:var(--ink-soft);padding:.5rem 0;line-height:1.5">台積電AZ廠區周邊社區與商場分布圖，含Vistancia社區與808亞洲商場車程示意。（圖／AI生成示意）</div>
   </div>
 </div>
 <!-- Topic 5 Water -->
@@ -595,7 +595,7 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
   <div style="max-width:1100px;margin:0 auto;padding:0 4rem 1.5rem">
     <div style="overflow:hidden;position:relative;margin-bottom:1.5rem">
       <img src="20260627105321-7307e4e9.jpg" alt="台積電水資源-亞利桑那-再生水廠" style="width:100%;display:block;max-height:460px;object-fit:cover">
-      <div style="font-family:var(--display);font-size:12px;color:var(--ink-soft);padding:.5rem 0">台積電亞利桑那工業再生水廠（Industrial Water Reclamation Plant, IWRP）渲染圖。（圖／台積電提供，僅供本報導使用）</div>
+      <div style="font-family:var(--display);font-size:15px;color:var(--ink-soft);padding:.5rem 0">台積電亞利桑那工業再生水廠（Industrial Water Reclamation Plant, IWRP）渲染圖。（圖／台積電提供，僅供本報導使用）</div>
     </div>
   </div>
   <div style="max-width:1100px;margin:0 auto;padding:0 4rem 3rem">
@@ -605,29 +605,29 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
 
         <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);margin-bottom:1.5rem">
           <div style="background:var(--surface);padding:1.2rem 1rem">
-            <div style="font-family:var(--mono);font-size:.7rem;color:var(--chip);letter-spacing:.1em;margin-bottom:.4rem">STAGE 01</div>
-            <div style="font-family:var(--display);font-size:.9rem;font-weight:700;color:var(--ink);margin-bottom:.3rem">廠內水循環</div>
-            <div style="font-size:.8rem;color:var(--ink-mid);line-height:1.6">一滴水用3.5次，廠內循環效率極致化</div>
+            <div style="font-family:var(--mono);font-size:1.1rem;color:var(--chip);letter-spacing:.1em;margin-bottom:.4rem">STAGE 01</div>
+            <div style="font-family:var(--display);font-size:1.1rem;font-weight:700;color:var(--ink);margin-bottom:.3rem">廠內水循環</div>
+            <div style="font-size:.10rem;color:var(--ink-mid);line-height:1.6">一滴水用3.5次，廠內循環效率極致化</div>
           </div>
           <div style="background:var(--surface);padding:1.2rem 1rem">
-            <div style="font-family:var(--mono);font-size:.7rem;color:var(--chip);letter-spacing:.1em;margin-bottom:.4rem">STAGE 02</div>
-            <div style="font-family:var(--display);font-size:.9rem;font-weight:700;color:var(--ink);margin-bottom:.3rem">開發替代水源</div>
-            <div style="font-size:.8rem;color:var(--ink-mid);line-height:1.6">導入工業再生水與市政再生水，降低自來水依賴</div>
+            <div style="font-family:var(--mono);font-size:1.1rem;color:var(--chip);letter-spacing:.1em;margin-bottom:.4rem">STAGE 02</div>
+            <div style="font-family:var(--display);font-size:1.1rem;font-weight:700;color:var(--ink);margin-bottom:.3rem">開發替代水源</div>
+            <div style="font-size:.10rem;color:var(--ink-mid);line-height:1.6">導入工業再生水與市政再生水，降低自來水依賴</div>
           </div>
           <div style="background:var(--surface);padding:1.2rem 1rem">
-            <div style="font-family:var(--mono);font-size:.7rem;color:var(--chip);letter-spacing:.1em;margin-bottom:.4rem">STAGE 03</div>
-            <div style="font-family:var(--display);font-size:.9rem;font-weight:700;color:var(--ink);margin-bottom:.3rem">水資源正效益</div>
-            <div style="font-size:.8rem;color:var(--ink-mid);line-height:1.6">回饋環境比取用更多，讓環境因台積電而更好</div>
+            <div style="font-family:var(--mono);font-size:1.1rem;color:var(--chip);letter-spacing:.1em;margin-bottom:.4rem">STAGE 03</div>
+            <div style="font-family:var(--display);font-size:1.1rem;font-weight:700;color:var(--ink);margin-bottom:.3rem">水資源正效益</div>
+            <div style="font-size:.10rem;color:var(--ink-mid);line-height:1.6">回饋環境比取用更多，讓環境因台積電而更好</div>
           </div>
         </div>
 
         <div style="border-left:2px solid var(--chip);padding:.7rem 1rem;background:rgba(74,168,216,.06);margin-top:1.2rem;margin-bottom:.8rem">
-          <div style="font-size:.88rem;color:var(--ink-mid);line-height:1.8;font-style:italic">「這似乎有違直覺，我們住在沙漠裡，卻擁有充足的水源供應。」</div>
+          <div style="font-size:1.08rem;color:var(--ink-mid);line-height:1.8;font-style:italic">「這似乎有違直覺，我們住在沙漠裡，卻擁有充足的水源供應。」</div>
           <div style="font-family:var(--display);font-size:.78rem;color:var(--chip-dark);font-weight:600;margin-top:.3rem">大鳳凰城經濟發展委員會（GPEC）總裁 Christine Mackay</div>
         </div>
 
-        <p style="font-size:.875rem;color:var(--ink-mid);line-height:1.85;margin-top:.8rem">亞利桑那廠正興建占地15英畝的工業再生水廠（IWRP），預計2028年啟動，三廠全速運轉後可使市政用水需求驟降至25%。鳳凰城擁有五種水源，1980年《地下水管理法》要求新企業取得「100年確保供水證明」。</p>
-        <p style="font-size:.875rem;color:var(--ink-mid);line-height:1.85;margin-top:.8rem">台積電不全盤複製台灣：亞利桑那改開放渠道為密閉式輸水減少蒸發；日本熊本則鼓勵農民冬季種稻補注地下水，公司收購稻米供員工食用，達成社區共榮。</p>
+        <p style="font-size:1.075rem;color:var(--ink-mid);line-height:1.85;margin-top:.8rem">亞利桑那廠正興建占地15英畝的工業再生水廠（IWRP），預計2028年啟動，三廠全速運轉後可使市政用水需求驟降至25%。鳳凰城擁有五種水源，1980年《地下水管理法》要求新企業取得「100年確保供水證明」。</p>
+        <p style="font-size:1.075rem;color:var(--ink-mid);line-height:1.85;margin-top:.8rem">台積電不全盤複製台灣：亞利桑那改開放渠道為密閉式輸水減少蒸發；日本熊本則鼓勵農民冬季種稻補注地下水，公司收購稻米供員工食用，達成社區共榮。</p>
 
         <div style="margin:1.5rem 0;background:var(--silicon);border:1px solid rgba(58,143,191,.15);border-radius:4px;padding:1.2rem">
   <div style="font-family:var(--mono);font-size:.75rem;color:var(--chip);letter-spacing:.1em;margin-bottom:.8rem">// 南科再生水廠流程</div>
@@ -749,20 +749,20 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
 
       <!-- 文字區 -->
       <div style="margin-bottom:2rem">
-        <div style="font-family:var(--mono);font-size:.8rem;color:var(--chip);letter-spacing:.1em;margin-bottom:.8rem">CI直飛 台北TPE → 鳳凰城PHX・2025年12月開航</div>
+        <div style="font-family:var(--mono);font-size:.10rem;color:var(--chip);letter-spacing:.1em;margin-bottom:.8rem">CI直飛 台北TPE → 鳳凰城PHX・2025年12月開航</div>
         <div style="font-family:var(--display);font-size:clamp(1.2rem,4vw,1.55rem);font-weight:700;color:var(--ink);line-height:1.2;margin-bottom:1rem">每週三班直飛・空中巴士A350-900<br>商務艙載客率達8至9成</div>
-        <p style="font-size:.9rem;color:var(--ink-mid);line-height:1.9;margin-bottom:1rem">華航客運處處長陳雅妮表示，鳳凰城航線不是單純新增航點，而是「連接台灣到美國西南部和中西部市場的重要布局」。一名高科技廠外派人員加上返台、會議、訓練、家屬探親，一年可能創造6到8人次往返，「這條航線是質跟量都兼具」。</p>
+        <p style="font-size:1.1rem;color:var(--ink-mid);line-height:1.9;margin-bottom:1rem">華航客運處處長陳雅妮表示，鳳凰城航線不是單純新增航點，而是「連接台灣到美國西南部和中西部市場的重要布局」。一名高科技廠外派人員加上返台、會議、訓練、家屬探親，一年可能創造6到8人次往返，「這條航線是質跟量都兼具」。</p>
 
         <div style="border-left:2px solid var(--chip);padding:.8rem 1rem;background:rgba(74,168,216,.06);margin:1.2rem 0">
-          <div style="font-size:.88rem;color:var(--ink-mid);line-height:1.8;font-style:italic">「最大的轉變，是把過去想去的人，變成真的會去的人。」</div>
+          <div style="font-size:1.08rem;color:var(--ink-mid);line-height:1.8;font-style:italic">「最大的轉變，是把過去想去的人，變成真的會去的人。」</div>
           <div style="font-family:var(--display);font-size:.78rem;color:var(--chip-dark);font-weight:600;margin-top:.4rem">中華航空客運處處長 陳雅妮</div>
         </div>
 
-        <p style="font-size:.9rem;color:var(--ink-mid);line-height:1.9;margin-bottom:1rem">鳳凰城天港國際機場行銷主管Van Haren指出，疫情前台灣與鳳凰城每天約25名旅客往返，如今已超過140人，成長幅度約400%。2025年來自台灣的訪客更成長471%。機場端看好台積電後續第二、三座晶圓廠擴張帶來的長期需求。</p>
+        <p style="font-size:1.1rem;color:var(--ink-mid);line-height:1.9;margin-bottom:1rem">鳳凰城天港國際機場行銷主管Van Haren指出，疫情前台灣與鳳凰城每天約25名旅客往返，如今已超過140人，成長幅度約400%。2025年來自台灣的訪客更成長471%。機場端看好台積電後續第二、三座晶圓廠擴張帶來的長期需求。</p>
 
         <div style="background:var(--surface-warm);border:1px solid var(--rule);padding:1.2rem;margin:1.2rem 0">
           <div style="font-family:var(--mono);font-size:.75rem;color:var(--chip);letter-spacing:.1em;margin-bottom:.8rem">// 華航直飛鳳凰城・航班資訊</div>
-          <div style="display:grid;grid-template-columns:auto 1fr;gap:.4rem 1rem;font-size:.85rem">
+          <div style="display:grid;grid-template-columns:auto 1fr;gap:.4rem 1rem;font-size:.1.05rem">
             <span style="color:var(--ink-soft);font-family:var(--mono)">航線</span><span style="color:var(--ink)">台北TPE → 鳳凰城PHX</span>
             <span style="color:var(--ink-soft);font-family:var(--mono)">機型</span><span style="color:var(--ink)">空中巴士A350-900</span>
             <span style="color:var(--ink-soft);font-family:var(--mono)">班次</span><span style="color:var(--ink)">每週三、五、日，共三班往返</span>
@@ -779,36 +779,36 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
           <div style="flex:1;display:flex;flex-direction:column;align-items:center;position:relative;padding-bottom:1rem">
             <div style="width:10px;height:10px;border-radius:50%;background:var(--sand);margin-bottom:.8rem;position:relative;z-index:1"></div>
             <div style="font-family:var(--mono);font-size:clamp(1.6rem,4vw,2rem);font-weight:700;color:var(--sand);line-height:1">8<span style="font-size:.75rem">成+</span></div>
-            <div style="font-family:var(--display);font-size:11px;color:var(--ink-mid);margin-top:.4rem;text-align:center">平均月載客率</div>
+            <div style="font-family:var(--display);font-size:17px;color:var(--ink-mid);margin-top:.4rem;text-align:center">平均月載客率</div>
             <div style="position:absolute;top:5px;left:50%;width:100%;height:1px;background:var(--rule)"></div>
           </div>
           <div style="flex:1;display:flex;flex-direction:column;align-items:center;position:relative;padding-bottom:1rem">
             <div style="width:10px;height:10px;border-radius:50%;background:var(--chip);margin-bottom:.8rem;position:relative;z-index:1"></div>
             <div style="font-family:var(--mono);font-size:clamp(1.6rem,4vw,2rem);font-weight:700;color:var(--chip);line-height:1">471<span style="font-size:.75rem">%</span></div>
-            <div style="font-family:var(--display);font-size:11px;color:var(--ink-mid);margin-top:.4rem;text-align:center">台灣訪客成長</div>
+            <div style="font-family:var(--display);font-size:17px;color:var(--ink-mid);margin-top:.4rem;text-align:center">台灣訪客成長</div>
             <div style="position:absolute;top:5px;left:50%;width:100%;height:1px;background:var(--rule)"></div>
           </div>
           <div style="flex:1;display:flex;flex-direction:column;align-items:center;position:relative;padding-bottom:1rem">
             <div style="width:10px;height:10px;border-radius:50%;background:var(--oasis);margin-bottom:.8rem;position:relative;z-index:1"></div>
             <div style="font-family:var(--mono);font-size:clamp(1.6rem,4vw,2rem);font-weight:700;color:var(--oasis);line-height:1">140<span style="font-size:.75rem">人+</span></div>
-            <div style="font-family:var(--display);font-size:11px;color:var(--ink-mid);margin-top:.4rem;text-align:center">每日台灣旅客</div>
+            <div style="font-family:var(--display);font-size:17px;color:var(--ink-mid);margin-top:.4rem;text-align:center">每日台灣旅客</div>
             <div style="position:absolute;top:5px;left:50%;width:100%;height:1px;background:var(--rule)"></div>
           </div>
           <div style="flex:1;display:flex;flex-direction:column;align-items:center;padding-bottom:1rem">
             <div style="width:10px;height:10px;border-radius:50%;background:var(--sand);margin-bottom:.8rem"></div>
             <div style="font-family:var(--mono);font-size:clamp(1.6rem,4vw,2rem);font-weight:700;color:var(--sand);line-height:1">13.5<span style="font-size:.75rem">hr</span></div>
-            <div style="font-family:var(--display);font-size:11px;color:var(--ink-mid);margin-top:.4rem;text-align:center">直飛飛行時數</div>
+            <div style="font-family:var(--display);font-size:17px;color:var(--ink-mid);margin-top:.4rem;text-align:center">直飛飛行時數</div>
           </div>
         </div>
         <div style="display:flex;justify-content:space-between;align-items:center;padding:.8rem 1.2rem;background:var(--surface-warm);border:1px solid var(--rule)">
           <div>
-            <div style="font-family:var(--mono);font-size:.85rem;font-weight:700;color:var(--chip)">台北TPE</div>
-            <div style="font-family:var(--mono);font-size:.7rem;color:var(--ink-soft);margin-top:.2rem">出發</div>
+            <div style="font-family:var(--mono);font-size:.1.05rem;font-weight:700;color:var(--chip)">台北TPE</div>
+            <div style="font-family:var(--mono);font-size:1.1rem;color:var(--ink-soft);margin-top:.2rem">出發</div>
           </div>
           <div style="flex:1;height:1px;background:linear-gradient(90deg,var(--chip),var(--sand));margin:0 1rem"></div>
           <div style="text-align:right">
-            <div style="font-family:var(--mono);font-size:.85rem;font-weight:700;color:var(--sand)">鳳凰城PHX</div>
-            <div style="font-family:var(--mono);font-size:.7rem;color:var(--ink-soft);margin-top:.2rem">抵達</div>
+            <div style="font-family:var(--mono);font-size:.1.05rem;font-weight:700;color:var(--sand)">鳳凰城PHX</div>
+            <div style="font-family:var(--mono);font-size:1.1rem;color:var(--ink-soft);margin-top:.2rem">抵達</div>
           </div>
         </div>
       </div>
@@ -826,19 +826,19 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
 
   <div style="width:100%;overflow:hidden;position:relative;margin-bottom:1.5rem">
     <img src="飛機停機坪 截圖.jpg" alt="漢翔航空美國子公司-亞利桑那-航太製造" style="width:100%;display:block;max-height:460px;object-fit:cover">
-    <div style="font-family:var(--display);font-size:12px;color:var(--ink-soft);padding:.5rem 0">UND航太飛行學校訓練台灣機師，亞利桑那一年超過300天晴天是天然優勢。（圖／黃貞怡攝）</div>
+    <div style="font-family:var(--display);font-size:15px;color:var(--ink-soft);padding:.5rem 0">UND航太飛行學校訓練台灣機師，亞利桑那一年超過300天晴天是天然優勢。（圖／黃貞怡攝）</div>
   </div>
 
-  <p style="font-size:.9rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1rem">漢翔在亞利桑那設點並非跟風。公司淵源追溯至民國70年代「雲漢計畫」，與Honeywell前身合資成立ITEC開發IDF發動機，這段40年伏筆讓漢翔在鳳凰城早有根基。2024年《購買美國貨法案》商機浮現，漢翔決定從辦公室升級為廠房，拿下AS9100航太品質認證，預計2026年7月取得，為2027年全面接單量產鋪路。</p>
+  <p style="font-size:1.1rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1rem">漢翔在亞利桑那設點並非跟風。公司淵源追溯至民國70年代「雲漢計畫」，與Honeywell前身合資成立ITEC開發IDF發動機，這段40年伏筆讓漢翔在鳳凰城早有根基。2024年《購買美國貨法案》商機浮現，漢翔決定從辦公室升級為廠房，拿下AS9100航太品質認證，預計2026年7月取得，為2027年全面接單量產鋪路。</p>
 
-  <p style="font-size:.9rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1rem">廠房分三區：A區聚焦發動機精密組件、B區保留無人機組裝與測試、C區為認證導入優先區。俄烏戰爭後無人機需求爆發，漢翔已與美國企業簽署合作備忘錄，搶進這塊新戰場。機台上還擺著台灣習俗帶來的「綠色乖乖」，張朝枝笑說：「發現放乖乖還真的鎮得住。」</p>
+  <p style="font-size:1.1rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1rem">廠房分三區：A區聚焦發動機精密組件、B區保留無人機組裝與測試、C區為認證導入優先區。俄烏戰爭後無人機需求爆發，漢翔已與美國企業簽署合作備忘錄，搶進這塊新戰場。機台上還擺著台灣習俗帶來的「綠色乖乖」，張朝枝笑說：「發現放乖乖還真的鎮得住。」</p>
 
   <div style="border-left:2px solid var(--sand);padding:.8rem 1rem;background:rgba(212,146,42,.06);margin:0 0 1.2rem">
-    <div style="font-size:.88rem;color:var(--ink-mid);line-height:1.8;font-style:italic">「在BAA法案當中，我要去拿到這個商機我可能就沒辦法。所以我必須要有一個在美國設立的一家美國公司，我才能夠去掌握這個商機。」</div>
+    <div style="font-size:1.08rem;color:var(--ink-mid);line-height:1.8;font-style:italic">「在BAA法案當中，我要去拿到這個商機我可能就沒辦法。所以我必須要有一個在美國設立的一家美國公司，我才能夠去掌握這個商機。」</div>
     <div style="font-family:var(--display);font-size:.78rem;color:var(--sand-dark);font-weight:600;margin-top:.3rem">漢翔航空美國子公司總經理 張朝枝</div>
   </div>
 
-  <p style="font-size:.9rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1.5rem">從漢翔廠房往東，採訪團隊來到梅薩市的UND航太飛行學校。疫情後全球機師需求大增，台灣學員須投入10至11萬美元、歷時18至24個月取得FAA商用飛行員執照。UND教官對台灣學員讚不絕口，歸功於台灣「補習班文化」帶來的高度準備。從地面精密製造到天空飛行訓練，亞利桑那已成為台灣航空與航太產業跨足全球的前哨站。</p>
+  <p style="font-size:1.1rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1.5rem">從漢翔廠房往東，採訪團隊來到梅薩市的UND航太飛行學校。疫情後全球機師需求大增，台灣學員須投入10至11萬美元、歷時18至24個月取得FAA商用飛行員執照。UND教官對台灣學員讚不絕口，歸功於台灣「補習班文化」帶來的高度準備。從地面精密製造到天空飛行訓練，亞利桑那已成為台灣航空與航太產業跨足全球的前哨站。</p>
 
   <a class="read-more" target="_blank" rel="noopener" href="https://news.tvbs.com.tw/world/3247640">閱讀完整報導</a>
   <div class="art-tags" style="margin-top:1rem">
@@ -862,42 +862,42 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
   <div class="section-sub">從幼兒園到大學，ASU、Arizona Science Center、West-MEC串起「K to Gray」完整人才鏈。</div>
   <div style="margin:1.5rem 0;position:relative;overflow:hidden">
     <img src="wmec學生上課.jpg" alt="West-MEC學生上課-半導體人才培育-亞利桑那" style="width:100%;display:block;max-height:420px;object-fit:cover;object-position:center">
-<div style="font-family:var(--display);font-size:12px;color:var(--ink-soft);padding:.5rem 0">West-MEC學生上半導體實務課。（圖／黃貞怡攝）</div>
+<div style="font-family:var(--display);font-size:15px;color:var(--ink-soft);padding:.5rem 0">West-MEC學生上半導體實務課。（圖／黃貞怡攝）</div>
   </div>
   <div class="stage-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--rule);margin-top:2rem">
     <div style="padding:1.6rem 1.4rem;border-right:1px solid var(--rule);background:var(--surface-warm)">
       <div style="font-family:var(--mono);font-size:.75rem;font-weight:700;color:var(--chip);letter-spacing:.1em;margin-bottom:.5rem">STAGE 01</div>
-      <div style="font-family:var(--display);font-size:.95rem;font-weight:700;color:var(--ink);margin-bottom:.4rem">幼兒園啟蒙</div>
-      <div style="font-family:var(--display);font-size:.8rem;color:var(--sand-dark);font-weight:600;margin-bottom:.5rem">Arizona Science Center</div>
+      <div style="font-family:var(--display);font-size:1.15rem;font-weight:700;color:var(--ink);margin-bottom:.4rem">幼兒園啟蒙</div>
+      <div style="font-family:var(--display);font-size:.10rem;color:var(--sand-dark);font-weight:600;margin-bottom:.5rem">Arizona Science Center</div>
       <div style="font-size:.82rem;color:var(--ink-mid);line-height:1.7">穿上兔子裝進模擬無塵室，孩童在互動展覽中第一次感受晶片世界</div>
     </div>
     <div style="padding:1.6rem 1.4rem;border-right:1px solid var(--rule);background:var(--surface)">
       <div style="font-family:var(--mono);font-size:.75rem;font-weight:700;color:var(--chip);letter-spacing:.1em;margin-bottom:.5rem">STAGE 02</div>
-      <div style="font-family:var(--display);font-size:.95rem;font-weight:700;color:var(--ink);margin-bottom:.4rem">高中技職</div>
-      <div style="font-family:var(--display);font-size:.8rem;color:var(--sand-dark);font-weight:600;margin-bottom:.5rem">West-MEC</div>
+      <div style="font-family:var(--display);font-size:1.15rem;font-weight:700;color:var(--ink);margin-bottom:.4rem">高中技職</div>
+      <div style="font-family:var(--display);font-size:.10rem;color:var(--sand-dark);font-weight:600;margin-bottom:.5rem">West-MEC</div>
       <div style="font-size:.82rem;color:var(--ink-mid);line-height:1.7">全美第一座擁有模擬無塵室的高中，台積電工程師直接參與課程設計，900小時實作</div>
     </div>
     <div style="padding:1.6rem 1.4rem;border-right:1px solid var(--rule);background:var(--surface-warm)">
       <div style="font-family:var(--mono);font-size:.75rem;font-weight:700;color:var(--chip);letter-spacing:.1em;margin-bottom:.5rem">STAGE 03</div>
-      <div style="font-family:var(--display);font-size:.95rem;font-weight:700;color:var(--ink);margin-bottom:.4rem">大學研發</div>
-      <div style="font-family:var(--display);font-size:.8rem;color:var(--sand-dark);font-weight:600;margin-bottom:.5rem">Arizona State University</div>
+      <div style="font-family:var(--display);font-size:1.15rem;font-weight:700;color:var(--ink);margin-bottom:.4rem">大學研發</div>
+      <div style="font-family:var(--display);font-size:.10rem;color:var(--sand-dark);font-weight:600;margin-bottom:.5rem">Arizona State University</div>
       <div style="font-size:.82rem;color:var(--ink-mid);line-height:1.7">產學合作從材料科學到製程工程，打造跨文化「第三種模式」人才</div>
     </div>
     <div style="padding:1.6rem 1.4rem;background:var(--sand);position:relative;overflow:hidden">
       <div style="position:absolute;top:-10px;right:-10px;width:60px;height:60px;border-radius:50%;background:rgba(255,255,255,.15)"></div>
       <div style="font-family:var(--mono);font-size:.75rem;font-weight:700;color:rgba(10,15,30,.6);letter-spacing:.1em;margin-bottom:.5rem">OUTCOME</div>
-      <div style="font-family:var(--display);font-size:.95rem;font-weight:700;color:var(--ink);margin-bottom:.4rem">半導體職場</div>
-      <div style="font-family:var(--display);font-size:.8rem;color:var(--ink);font-weight:600;margin-bottom:.5rem">TSMC・Intel・Amkor</div>
+      <div style="font-family:var(--display);font-size:1.15rem;font-weight:700;color:var(--ink);margin-bottom:.4rem">半導體職場</div>
+      <div style="font-family:var(--display);font-size:.10rem;color:var(--ink);font-weight:600;margin-bottom:.5rem">TSMC・Intel・Amkor</div>
       <div style="font-size:.82rem;color:rgba(10,15,30,.7);line-height:1.7">K to Gray：從幼稚園到白髮蒼蒼，源源不絕的人才水庫</div>
     </div>
   </div>
 
   <div style="border-left:2px solid var(--chip);padding:.8rem 1rem;background:rgba(74,168,216,.06);margin:2rem 0">
-    <div style="font-size:.88rem;color:var(--ink-mid);line-height:1.8;font-style:italic">「我真的非常希望，我也祈禱當我滿18歲畢業時——我夠格進入台積電工作。」</div>
+    <div style="font-size:1.08rem;color:var(--ink-mid);line-height:1.8;font-style:italic">「我真的非常希望，我也祈禱當我滿18歲畢業時——我夠格進入台積電工作。」</div>
     <div style="font-family:var(--display);font-size:.78rem;color:var(--chip-dark);font-weight:600;margin-top:.3rem">West-MEC 11年級學生 Aiden</div>
   </div>
 
-  <p style="font-size:.9rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1rem">ASU副校長O'Sullivan形容雙方合作目標：讓畢業生為台積電職涯做好準備。她樂觀看待台美文化融合，認為可以結合兩者優點，創造出借鑑兩種文化最好部分的「第三種模式（third way）」。</p>
+  <p style="font-size:1.1rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1rem">ASU副校長O'Sullivan形容雙方合作目標：讓畢業生為台積電職涯做好準備。她樂觀看待台美文化融合，認為可以結合兩者優點，創造出借鑑兩種文化最好部分的「第三種模式（third way）」。</p>
 
   <a class="read-more" target="_blank" rel="noopener" href="https://news.tvbs.com.tw/world/3239807">閱讀完整報導</a>
 </div>
@@ -910,7 +910,7 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
    <!-- 橫圖 -->
    <div style="width:100%;overflow:hidden;position:relative;margin-bottom:1.5rem">
      <img src="ASU校門修圖.jpg" alt="ASU-亞利桑那州立大學" style="width:100%;display:block;max-height:460px;object-fit:cover">
-<div style="font-family:var(--display);font-size:12px;color:var(--ink-soft);padding:.5rem 0">亞利桑那州立大學校園一景。（圖／黃貞怡攝）</div>
+<div style="font-family:var(--display);font-size:15px;color:var(--ink-soft);padding:.5rem 0">亞利桑那州立大學校園一景。（圖／黃貞怡攝）</div>
    </div>
 
    <!-- 左右欄 -->
@@ -924,11 +924,11 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
        <div class="lead-kicker">ASU・矽巨頭・產學合作</div>
        <h2 style="font-family:var(--display);font-size:1.45rem;font-weight:700;color:var(--ink);letter-spacing:-.02em;line-height:1.25;margin-bottom:1rem">ASU要成為台積電<br>教學、學習與探索的策略盟友</h2>
        <div style="border-left:2px solid var(--sand);padding:.7rem 1rem;background:rgba(212,146,42,.06);margin:0 0 1rem">
-         <div style="font-size:.88rem;color:var(--ink-mid);line-height:1.8;font-style:italic">「台積電是地球上最重要的公司之一。ASU要成為台積電在亞利桑那教學、學習與探索的策略盟友。」</div>
+         <div style="font-size:1.08rem;color:var(--ink-mid);line-height:1.8;font-style:italic">「台積電是地球上最重要的公司之一。ASU要成為台積電在亞利桑那教學、學習與探索的策略盟友。」</div>
          <div style="font-family:var(--display);font-size:.78rem;color:var(--sand-dark);font-weight:600;margin-top:.3rem">ASU校長 Michael Crow</div>
        </div>
-       <p style="font-size:.9rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1rem">ASU計畫在台積電廠區周邊購地建立研發中心，邀請台灣大專院校進駐，甚至設立中英文雙語中小學。校內的「巨觀技術工廠」（MTW）前身為摩托羅拉晶圓廠，2025年與應用材料共同啟用「從材料到晶圓廠中心」（MTF），引入工業級300毫米設備，學生可直接操作造價300萬至1,500萬美元的尖端設備。</p>
-       <p style="font-size:.9rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1.5rem">柯若坦言，台灣在實務訓練上有些地方比美國更成熟；ASU希望把台灣的實務訓練，與美國大學培養廣泛創造力的方式結合，建立「混合模式」。雙方2026年5月已啟動針對技術人員的培訓計畫。</p>
+       <p style="font-size:1.1rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1rem">ASU計畫在台積電廠區周邊購地建立研發中心，邀請台灣大專院校進駐，甚至設立中英文雙語中小學。校內的「巨觀技術工廠」（MTW）前身為摩托羅拉晶圓廠，2025年與應用材料共同啟用「從材料到晶圓廠中心」（MTF），引入工業級300毫米設備，學生可直接操作造價300萬至1,500萬美元的尖端設備。</p>
+       <p style="font-size:1.1rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1.5rem">柯若坦言，台灣在實務訓練上有些地方比美國更成熟；ASU希望把台灣的實務訓練，與美國大學培養廣泛創造力的方式結合，建立「混合模式」。雙方2026年5月已啟動針對技術人員的培訓計畫。</p>
        <a class="read-more" target="_blank" rel="noopener" href="https://news.tvbs.com.tw/world/3236321">閱讀完整報導</a>
        <div class="art-tags" style="margin-top:1rem">
          <span class="tag">ASU</span><span class="tag">矽巨頭</span><span class="tag">MTW</span><span class="tag">應用材料</span><span class="tag">產學合作</span>
@@ -948,25 +948,25 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
   <div class="section-sub">ASU資訊系統系主任陳佩瑜警示AI自主與國安密不可分，Dreamscape Learn用好萊塢敘事把課程變沉浸式冒險。</div>
     <div style="width:100%;overflow:hidden;position:relative;margin-bottom:1.5rem">
       <img src="VR上課.jpg" alt="ASU-VR教學-Dreamscape-沉浸式學習" style="width:100%;display:block;max-height:460px;object-fit:cover">
-<div style="font-family:var(--display);font-size:12px;color:var(--ink-soft);padding:.5rem 0">亞利桑那州立大學學生於Dreamscape Learn接受VR教學。（圖／黃貞怡攝）</div>
+<div style="font-family:var(--display);font-size:15px;color:var(--ink-soft);padding:.5rem 0">亞利桑那州立大學學生於Dreamscape Learn接受VR教學。（圖／黃貞怡攝）</div>
     </div>
     <div class="wide-feat-body" style="padding:0">
       <div class="lead-kicker">AI教育・VR・產學接軌</div>
       <h2 style="font-family:var(--display);font-size:1.45rem;font-weight:700;color:var(--ink);letter-spacing:-.02em;line-height:1.25;margin-bottom:1rem">半導體是AI的心臟<br>但只有心臟還不夠</h2>
 
-      <p style="font-size:.9rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1rem">1998年從台灣赴美的陳佩瑜教授觀察，台美產業鏈互補性強：台灣專精硬體半導體，美國擅長AI軟體與智能化，強強聯手才能打造完整AI科技鏈。但她也警告，AI自主能力事關國家安全，過度依賴他國雲端與設施將是隱患。</p>
+      <p style="font-size:1.1rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1rem">1998年從台灣赴美的陳佩瑜教授觀察，台美產業鏈互補性強：台灣專精硬體半導體，美國擅長AI軟體與智能化，強強聯手才能打造完整AI科技鏈。但她也警告，AI自主能力事關國家安全，過度依賴他國雲端與設施將是隱患。</p>
 
-      <p style="font-size:.9rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1rem">她最擔心的是下一代的判斷力：「現在這一代人至少受過基礎訓練，還能判斷AI回答是否合理，但下一代的孩子如果都依賴AI，就會缺乏判斷能力。」ASU的因應之道是推動實務導向學習，把企業真實專案帶進課堂，讓學生在學習環境中就能接觸真實挑戰，培養「Day 1 Ready」人才。</p>
+      <p style="font-size:1.1rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1rem">她最擔心的是下一代的判斷力：「現在這一代人至少受過基礎訓練，還能判斷AI回答是否合理，但下一代的孩子如果都依賴AI，就會缺乏判斷能力。」ASU的因應之道是推動實務導向學習，把企業真實專案帶進課堂，讓學生在學習環境中就能接觸真實挑戰，培養「Day 1 Ready」人才。</p>
 
       <div style="border-left:2px solid var(--sand);padding:.7rem 1rem;background:rgba(212,146,42,.06);margin:0 0 1rem">
-        <div style="font-size:.88rem;color:var(--ink-mid);line-height:1.8;font-style:italic">「如果你都是在別人的雲端運作，用別人的設施，哪一天人家把你切斷了，你很多事情都做不了。」</div>
+        <div style="font-size:1.08rem;color:var(--ink-mid);line-height:1.8;font-style:italic">「如果你都是在別人的雲端運作，用別人的設施，哪一天人家把你切斷了，你很多事情都做不了。」</div>
         <div style="font-family:var(--display);font-size:.78rem;color:var(--sand-dark);font-weight:600;margin-top:.3rem">ASU資訊系統系主任 陳佩瑜教授</div>
       </div>
 
-      <p style="font-size:.9rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1.5rem">ASU與好萊塢製片人帕克斯合作打造Dreamscape Learn，以電影敘事架構設計VR課程，學生化身主角「出任務」解決真實問題。化工系大二生Dhruv累積18次VR課體驗，直言遠勝「乾坐在死氣沉沉的傳統教室裡翻教材」。目前已有多個團隊洽談開發半導體相關VR課程。</p>
+      <p style="font-size:1.1rem;color:var(--ink-mid);line-height:1.95;margin-bottom:1.5rem">ASU與好萊塢製片人帕克斯合作打造Dreamscape Learn，以電影敘事架構設計VR課程，學生化身主角「出任務」解決真實問題。化工系大二生Dhruv累積18次VR課體驗，直言遠勝「乾坐在死氣沉沉的傳統教室裡翻教材」。目前已有多個團隊洽談開發半導體相關VR課程。</p>
 
       <div style="border-left:2px solid var(--chip);padding:.7rem 1rem;background:rgba(74,168,216,.06);margin:1rem 0">
-        <div style="font-size:.88rem;color:var(--ink-mid);line-height:1.8;font-style:italic">「Dreamscape甚至不算是一家VR公司，它是一家『沉浸式敘事教育公司』，藉由讓學生成為核心主角去解決現實問題。」</div>
+        <div style="font-size:1.08rem;color:var(--ink-mid);line-height:1.8;font-style:italic">「Dreamscape甚至不算是一家VR公司，它是一家『沉浸式敘事教育公司』，藉由讓學生成為核心主角去解決現實問題。」</div>
         <div style="font-family:var(--display);font-size:.78rem;color:var(--chip-dark);font-weight:600;margin-top:.3rem">ASU EdPlus沉浸式學習副院長 John VandenBrooks教授</div>
       </div>
       
@@ -996,13 +996,13 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
   <div class="section-sub">從便當店到龍舟隊，從跨文化顧問到慈濟社區客廳，台積電帶來的不只是工程師，而是一整個台灣生活生態系在沙漠落地生根。</div>
 
   <div style="border-left:3px solid var(--sand);padding:1.2rem 1.5rem;background:rgba(212,146,42,.04);margin:2rem 0">
-    <p style="font-size:.95rem;color:var(--ink-mid);line-height:2;margin-bottom:1rem">台積電帶到鳳凰城的，不只是晶片製造能力。便當店老闆把台鐵排骨便當的滋味帶進工地拖車，慈濟把「社區客廳」開在科技新貴聚集的北鳳凰城，龍舟隊讓台灣青少年用木槳在沙漠水道找回歸屬感。台灣的食物、信仰、社群與文化，跟著工程師一起在異鄉落地生根。</p>
+    <p style="font-size:1.15rem;color:var(--ink-mid);line-height:2;margin-bottom:1rem">台積電帶到鳳凰城的，不只是晶片製造能力。便當店老闆把台鐵排骨便當的滋味帶進工地拖車，慈濟把「社區客廳」開在科技新貴聚集的北鳳凰城，龍舟隊讓台灣青少年用木槳在沙漠水道找回歸屬感。台灣的食物、信仰、社群與文化，跟著工程師一起在異鄉落地生根。</p>
     <div style="display:flex;flex-wrap:wrap;gap:.5rem">
-      <span style="font-family:var(--mono);font-size:11px;color:var(--sand-dark);border:1px solid var(--sand-dark);padding:4px 10px">餐飲創業</span>
-      <span style="font-family:var(--mono);font-size:11px;color:var(--sand-dark);border:1px solid var(--sand-dark);padding:4px 10px">職場文化出海</span>
-      <span style="font-family:var(--mono);font-size:11px;color:var(--sand-dark);border:1px solid var(--sand-dark);padding:4px 10px">跨文化適應</span>
-      <span style="font-family:var(--mono);font-size:11px;color:var(--sand-dark);border:1px solid var(--sand-dark);padding:4px 10px">慈濟社區客廳</span>
-      <span style="font-family:var(--mono);font-size:11px;color:var(--sand-dark);border:1px solid var(--sand-dark);padding:4px 10px">龍舟歸屬感</span>
+      <span style="font-family:var(--mono);font-size:17px;color:var(--sand-dark);border:1px solid var(--sand-dark);padding:4px 10px">餐飲創業</span>
+      <span style="font-family:var(--mono);font-size:17px;color:var(--sand-dark);border:1px solid var(--sand-dark);padding:4px 10px">職場文化出海</span>
+      <span style="font-family:var(--mono);font-size:17px;color:var(--sand-dark);border:1px solid var(--sand-dark);padding:4px 10px">跨文化適應</span>
+      <span style="font-family:var(--mono);font-size:17px;color:var(--sand-dark);border:1px solid var(--sand-dark);padding:4px 10px">慈濟社區客廳</span>
+      <span style="font-family:var(--mono);font-size:17px;color:var(--sand-dark);border:1px solid var(--sand-dark);padding:4px 10px">龍舟歸屬感</span>
     </div>
   </div>
 <!-- 人物群像 -->
@@ -1151,7 +1151,7 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
       <div style="position:relative;width:100%;padding-top:56.25%;background:var(--silicon);overflow:hidden;border-radius:4px">
         <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0" src="https://www.youtube.com/embed/x1PTwgeYRY8" allowfullscreen loading="lazy"></iframe>
       </div>
-      <div style="font-family:var(--display);font-size:13px;color:rgba(255,255,255,.5);padding:.5rem 0">完整一小時專題｜矽沙漠崛起：台積電把亞利桑那變綠洲</div>
+      <div style="font-family:var(--display);font-size:16px;color:rgba(255,255,255,.5);padding:.5rem 0">完整一小時專題｜矽沙漠崛起：台積電把亞利桑那變綠洲</div>
     </div>
 
     <!-- 五則SOT小格 -->
@@ -1160,31 +1160,31 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
         <div style="position:relative;width:100%;padding-top:56.25%;background:var(--silicon);overflow:hidden;border-radius:4px">
           <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0" src="https://www.youtube.com/embed/4DnP-sN1n7s" allowfullscreen loading="lazy"></iframe>
         </div>
-        <div style="font-family:var(--display);font-size:12px;color:rgba(255,255,255,.5);padding:.4rem 0;line-height:1.4">一滴水都不能錯！台積電造水不求人　沙漠中鞏固晶圓命脈</div>
+        <div style="font-family:var(--display);font-size:15px;color:rgba(255,255,255,.5);padding:.4rem 0;line-height:1.4">一滴水都不能錯！台積電造水不求人　沙漠中鞏固晶圓命脈</div>
       </div>
       <div>
         <div style="position:relative;width:100%;padding-top:56.25%;background:var(--silicon);overflow:hidden;border-radius:4px">
           <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0" src="https://www.youtube.com/embed/SZUAmrlpoUs" allowfullscreen loading="lazy"></iframe>
         </div>
-        <div style="font-family:var(--display);font-size:12px;color:rgba(255,255,255,.5);padding:.4rem 0;line-height:1.4">鳳凰城成「美版竹科」進行式！美重拾晶片製造得先「補習」</div>
+        <div style="font-family:var(--display);font-size:15px;color:rgba(255,255,255,.5);padding:.4rem 0;line-height:1.4">鳳凰城成「美版竹科」進行式！美重拾晶片製造得先「補習」</div>
       </div>
       <div>
         <div style="position:relative;width:100%;padding-top:56.25%;background:var(--silicon);overflow:hidden;border-radius:4px">
           <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0" src="https://www.youtube.com/embed/_izvdfMy0Os" allowfullscreen loading="lazy"></iframe>
         </div>
-        <div style="font-family:var(--display);font-size:12px;color:rgba(255,255,255,.5);padding:.4rem 0;line-height:1.4">台廠大航海時代來了！遠征鳳凰城佈局全球</div>
+        <div style="font-family:var(--display);font-size:15px;color:rgba(255,255,255,.5);padding:.4rem 0;line-height:1.4">台廠大航海時代來了！遠征鳳凰城佈局全球</div>
       </div>
       <div>
         <div style="position:relative;width:100%;padding-top:56.25%;background:var(--silicon);overflow:hidden;border-radius:4px">
           <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0" src="https://www.youtube.com/embed/uTNr2q8LOZ0" allowfullscreen loading="lazy"></iframe>
         </div>
-        <div style="font-family:var(--display);font-size:12px;color:rgba(255,255,255,.5);padding:.4rem 0;line-height:1.4">空拍看亞利桑那美景　TVBS解鎖Az飛行體驗</div>
+        <div style="font-family:var(--display);font-size:15px;color:rgba(255,255,255,.5);padding:.4rem 0;line-height:1.4">空拍看亞利桑那美景　TVBS解鎖Az飛行體驗</div>
       </div>
       <div>
         <div style="position:relative;width:100%;padding-top:56.25%;background:var(--silicon);overflow:hidden;border-radius:4px">
           <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0" src="https://www.youtube.com/embed/acrGjZW3hHk" allowfullscreen loading="lazy"></iframe>
         </div>
-        <div style="font-family:var(--display);font-size:12px;color:rgba(255,255,255,.5);padding:.4rem 0;line-height:1.4">餐飲界神山　鼎泰豐美國單店8億營收　楊家第三代帥總接棒</div>
+        <div style="font-family:var(--display);font-size:15px;color:rgba(255,255,255,.5);padding:.4rem 0;line-height:1.4">餐飲界神山　鼎泰豐美國單店8億營收　楊家第三代帥總接棒</div>
       </div>
     </div>
   </div>

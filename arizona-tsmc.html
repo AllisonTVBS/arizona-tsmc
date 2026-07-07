@@ -222,7 +222,11 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
 /* ── RESPONSIVE ── */
 @media(max-width:768px){
   .site-header{padding:0 1.2rem}
-  .site-header nav{display:none}
+  #hamburger{display:flex !important}
+#main-nav{display:none;position:fixed;top:52px;left:0;right:0;background:var(--ink);flex-direction:column;padding:1rem 1.5rem;z-index:199;border-top:1px solid rgba(255,255,255,.1)}
+#main-nav.open{display:flex}
+#main-nav a{padding:.8rem 0;font-size:16px;border-bottom:1px solid rgba(255,255,255,.08)}
+#main-nav a:last-child{border-bottom:none}
   .hero{min-height:115vh}
   .hero-content{padding:0 1.5rem 3.5rem;padding-top:5rem}
   .hero h1{font-size:2.6rem;margin-bottom:1.2rem}
@@ -258,17 +262,21 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
 
 <!-- HEADER -->
 <header class="site-header">
-  <a class="header-logo" href="#">
-    <img src="TVBS logo-white.png" alt="TVBS">TVBS新聞網
+  <a class="header-logo" href="https://news.tvbs.com.tw">
+    <img src="TVBS logo-white.png" alt="TVBS" height="28">TVBS新聞網
   </a>
-  <nav>
-  <a href="#industry">產業篇</a>
-  <a href="#city">城市篇</a>
-  <a href="#aviation">航空篇</a>
-  <a href="#talent">人才篇</a>
-  <a href="#life">生活篇</a>
-</nav>
-
+  <nav id="main-nav">
+    <a href="#industry">產業篇</a>
+    <a href="#city">城市篇</a>
+    <a href="#aviation">航空篇</a>
+    <a href="#talent">人才篇</a>
+    <a href="#life">生活篇</a>
+  </nav>
+  <button id="hamburger" aria-label="選單" style="display:none;background:none;border:none;cursor:pointer;padding:4px;flex-direction:column;gap:5px;justify-content:center;align-items:center">
+    <span style="display:block;width:22px;height:2px;background:white;transition:all .3s"></span>
+    <span style="display:block;width:22px;height:2px;background:white;transition:all .3s"></span>
+    <span style="display:block;width:22px;height:2px;background:white;transition:all .3s"></span>
+  </button>
 </header>
 
 <!-- HERO -->
@@ -1208,4 +1216,16 @@ body{background:var(--surface-warm);overflow-x:hidden;color:var(--ink-mid);font-
   </div>
   <div class="footer-chip-line"></div>
 </footer>
+<script>
+const hamburger = document.getElementById('hamburger');
+const nav = document.getElementById('main-nav');
+hamburger.addEventListener('click', function(){
+  nav.classList.toggle('open');
+});
+nav.querySelectorAll('a').forEach(function(a){
+  a.addEventListener('click', function(){
+    nav.classList.remove('open');
+  });
+});
+</script>
 </html>
